@@ -19,7 +19,9 @@ export function PageShell({ children }: { children: React.ReactNode }) {
               <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> {contact.email}</span>
             </div>
           </div>
-          <FooterColumn title="About Us" items={aboutItems} />`r`n          <FooterColumn title="Routes" items={navItems} />`r`n          <FooterColumn title="Services" items={services.map((s) => ({ href: s.href, label: s.title }))} />
+          <FooterColumn title="About Us" items={aboutItems} />
+          <FooterColumn title="Routes" items={navItems} />
+          <FooterColumn title="Services" items={services.map((s) => ({ href: s.href, label: s.title }))} />
         </div>
         <div className="border-t border-white/10 px-5 py-5 text-center text-sm text-white/50">© 2005-2026 Matrix Intertech Pvt. Ltd. All rights reserved.</div>
       </footer>
@@ -106,6 +108,7 @@ export function EnquiryCTA({ image = "/images/matrix/contact.webp" }: { image?: 
     </section>
   );
 }
+
 
 
 
