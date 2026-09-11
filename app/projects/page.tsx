@@ -1,0 +1,32 @@
+﻿import type { Metadata } from "next";
+import { getRouteSeo } from "@/lib/seo";
+
+const seo = getRouteSeo("/projects");
+export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+import { EnquiryCTA, PageHero, PageShell, PreviousClients, SectionHeader } from "@/components/site";
+import { MotionCard, ParallaxImage, SectionReveal } from "@/components/motion";
+import { projects } from "@/lib/site-data";
+
+export default function Page() {
+  return (
+    <PageShell>
+      <PageHero eyebrow="Projects" title="Project environments built for daily use and long-term impression." text="The portfolio structure is preserved as project categories, ready for detailed case studies as photography and client approvals become available." image="/images/matrix/projects-office.webp" />
+      <section className="bg-warm px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader eyebrow="Project types" title="Corporate, commercial, residential and execution-led environments." />
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {projects.map((project, index) => <SectionReveal key={project.title} delay={index * 0.05} className={index === 0 ? "h-full md:col-span-2" : "h-full"}><MotionCard className="group flex h-full flex-col bg-white"><div className={`relative overflow-hidden ${index === 0 ? "aspect-[16/8]" : "aspect-[16/8]"}`}><ParallaxImage src={project.image} alt="" className="absolute inset-0" strength={10} /></div><div className="p-7"><p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">0{index + 1}</p><h2 className="mt-3 text-2xl font-semibold">{project.title}</h2><p className="mt-3 max-w-2xl text-base leading-7 text-charcoal/66">{project.text}</p></div></MotionCard></SectionReveal>)}
+          </div>
+        </div>
+      </section>
+      <PreviousClients />
+      <EnquiryCTA image="/images/matrix/projects-office.webp" />
+    </PageShell>
+  );
+}
+
+
+
+
+
+
