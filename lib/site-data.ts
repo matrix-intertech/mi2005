@@ -1,6 +1,12 @@
-﻿export const navItems = [
+﻿export const aboutItems = [
+  { href: "/about-us", label: "Our Company" },
+  { href: "/clients", label: "Our Clients" },
+  { href: "/company-factsheet", label: "Company Factsheet" },
+  { href: "/contact-us", label: "Contact Us" },
+];
+
+export const navItems = [
   { href: "/", label: "Home" },
-  { href: "/who-we-are/", label: "Who We Are" },
   { href: "/process/", label: "Process" },
   { href: "/projects/", label: "Projects" },
   { href: "/career", label: "Career" },
@@ -91,3 +97,5 @@ export const previousClients = [
   { name: "IGT Solutions", logo: "/images/clients/igt-solutions.webp" },
   { name: "Tata Projects Limited", logo: "/images/clients/tata-projects.webp" },
 ];
+
+

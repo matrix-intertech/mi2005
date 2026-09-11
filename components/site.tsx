@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { ArrowRight, Mail, Phone } from "lucide-react";
-import { contact, navItems, previousClients, services, trustItems } from "@/lib/site-data";
+import { aboutItems, contact, navItems, previousClients, services, trustItems } from "@/lib/site-data";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
 import { SiteHeader } from "@/components/site-header";
 
@@ -10,7 +10,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       {children}
       <footer className="bg-charcoal text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_.7fr_.7fr]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_.65fr_.65fr_.65fr]">
           <div>
             <img src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" className="h-14 w-auto max-w-[240px] object-contain" />
             <p className="mt-4 max-w-xl text-base leading-7 text-white/70">Interior, architecture and turnkey implementation for corporate, residential and commercial projects.</p>
@@ -19,8 +19,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
               <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> {contact.email}</span>
             </div>
           </div>
-          <FooterColumn title="Routes" items={navItems} />
-          <FooterColumn title="Services" items={services.map((s) => ({ href: s.href, label: s.title }))} />
+          <FooterColumn title="About Us" items={aboutItems} />`r`n          <FooterColumn title="Routes" items={navItems} />`r`n          <FooterColumn title="Services" items={services.map((s) => ({ href: s.href, label: s.title }))} />
         </div>
         <div className="border-t border-white/10 px-5 py-5 text-center text-sm text-white/50">© 2005-2026 Matrix Intertech Pvt. Ltd. All rights reserved.</div>
       </footer>
@@ -107,6 +106,8 @@ export function EnquiryCTA({ image = "/images/matrix/contact.webp" }: { image?: 
     </section>
   );
 }
+
+
 
 
 

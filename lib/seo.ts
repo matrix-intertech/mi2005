@@ -14,6 +14,11 @@ export const routeSeo = [
     description: "Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.",
   },
   {
+    path: "/about-us",
+    title: "About Us | Matrix Intertech",
+    description: "About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.",
+  },
+  {
     path: "/real-estate",
     title: "Real Estate Interiors | Matrix Intertech",
     description: "Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.",
@@ -49,6 +54,16 @@ export const routeSeo = [
     description: "Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.",
   },
   {
+    path: "/clients",
+    title: "Our Clients | Matrix Intertech",
+    description: "Explore Matrix Intertech client associations across banking, aviation, media, retail, infrastructure, hospitality and corporate interiors.",
+  },
+  {
+    path: "/company-factsheet",
+    title: "Company Factsheet | Matrix Intertech",
+    description: "Matrix Intertech company factsheet with founding year, Delhi base, turnkey interior capabilities, sectors served and contact details.",
+  },
+  {
     path: "/contact-us",
     title: "Contact | Matrix Intertech",
     description: "Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.",
@@ -73,3 +88,5 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     priority: route.path === "/" ? 1 : route.path === "/contact-us" ? 0.9 : 0.7,
   }));
 }
+
+
