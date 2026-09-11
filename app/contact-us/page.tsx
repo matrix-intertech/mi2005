@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <PageShell>
       <PageHero eyebrow="Contact" title="Start with the site, scope and timeline." text="Share project basics and the team can follow up with the right next step. Enquiries are delivered through the configured contact email workflow." image="/images/matrix/contact.webp" />
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <SectionHeader eyebrow="Reach us" title="Delhi office and project team." />
             <div className="mt-8 grid gap-5">

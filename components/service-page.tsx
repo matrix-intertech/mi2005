@@ -9,8 +9,8 @@ export function ServicePage({ slug }: { slug: string }) {
   return (
     <PageShell>
       <PageHero eyebrow="Service" title={service.title} text={service.summary} image={service.image} />
-      <section className="bg-warm px-5 py-14 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.98fr_1.02fr] lg:items-center">
+      <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.98fr_1.02fr] lg:items-center">
           <ParallaxImage src={service.image} alt="" className="min-h-[280px] sm:min-h-[420px] lg:min-h-[460px]" strength={16} />
           <div>
             <SectionHeader eyebrow="Scope" title={`A complete delivery lens for ${service.title.toLowerCase()}.`} text="Each engagement is shaped around site conditions, practical detailing, finish quality and dependable handover." />

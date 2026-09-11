@@ -5,7 +5,7 @@ import { PageShell } from "@/components/site";
 export default function NotFound() {
   return (
     <PageShell>
-      <main className="bg-warm px-5 py-28 sm:px-8">
+      <main className="bg-warm px-5 py-28 sm:px-6">
         <section className="mx-auto max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-bronze">404</p>
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-charcoal sm:text-7xl">This page is not on the plan.</h1>

@@ -76,8 +76,8 @@ export function AboutPage() {
       />
       <TrustStrip />
 
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
           <div>
             <SectionHeader
               eyebrow="Company story"
@@ -99,8 +99,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.85fr_1.15fr]">
           <SectionHeader
             eyebrow="What we do"
             title="Complete interior solutions for commercial, residential and hospitality environments."
@@ -121,8 +121,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-charcoal px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
+      <section className="bg-charcoal px-5 py-16 text-white sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <SectionHeader
               eyebrow="Turnkey delivery model"
@@ -153,8 +153,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
             <SectionHeader eyebrow="Sectors served" title="A delivery partner for varied project environments." text="The same integrated approach adapts across workplace, retail, hospitality, housing and private residential briefs." />
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -171,8 +171,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
           <div>
             <SectionHeader eyebrow="What makes us special" title="Experienced people, current technology and delivery ownership." text="Matrix combines professional project conduct with a team of specialists who understand design, detailing, site realities and client communication. The result is a smoother path from imagination to completed space." />
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -199,8 +199,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-charcoal px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-charcoal px-5 py-16 text-white sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <SectionHeader
               eyebrow="CERTIFICATIONS"
@@ -236,8 +236,8 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <SectionHeader eyebrow="Project capability" title="Spaces shaped around operations, presentation and handover readiness." />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {projects.map((project, index) => (

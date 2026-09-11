@@ -28,8 +28,8 @@ export default function Page() {
   return (
     <PageShell>
       <PageHero eyebrow="Company factsheet" title="Matrix Intertech at a glance." text="A New Delhi based interior and architectural services company specializing in turnkey interiors, maintenance, space planning and complete project delivery." image="/images/matrix/process.webp" />
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((item, index) => (
               <SectionReveal key={item.label} delay={index * 0.05}>
@@ -42,8 +42,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.85fr_1.15fr]">
           <SectionHeader eyebrow="Capability summary" title="Interior, architecture and turnkey execution under one roof." text="Matrix supports clients with turnkey interiors, maintenance, space planning and site delivery across commercial, residential and institutional environments." />
           <div className="grid gap-4 sm:grid-cols-2">
             {capabilities.map(({ icon: Icon, title, text }, index) => (
@@ -58,8 +58,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-charcoal px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr]">
+      <section className="bg-charcoal px-5 py-16 text-white sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1fr_1fr]">
           <div>
             <SectionHeader eyebrow="Sectors" title="Built for varied project environments." text="Matrix works across banking, corporate offices, retail, aviation, hospitality, residential and commercial spaces." inverse />
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -78,8 +78,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.85fr_1.15fr]">
           <SectionHeader eyebrow="Certifications" title="Compliance documents available for review." text="Matrix keeps its company credentials accessible for clients reviewing quality systems, environmental management, safety practices and registration documentation." />
           <div className="grid gap-4 sm:grid-cols-2">
             {[

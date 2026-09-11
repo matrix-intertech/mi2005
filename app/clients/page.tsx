@@ -19,8 +19,8 @@ export default function Page() {
   return (
     <PageShell>
       <PageHero eyebrow="Our clients" title="Trusted by leading brands across India." text="Matrix Intertech has delivered interior, fit-out and turnkey execution work for organizations across banking, aviation, media, retail, infrastructure, hospitality and corporate sectors." image="/images/matrix/projects-office.webp" />
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.9fr_1.1fr]">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.9fr_1.1fr]">
           <SectionHeader eyebrow="Client portfolio" title="A track record shaped by demanding project environments." text="From customer-facing locations to operational workplaces, Matrix brings a single accountable team for design coordination, site execution and handover readiness." />
           <div className="grid gap-4 sm:grid-cols-3">
             {trustNotes.map(({ icon: Icon, title, text }, index) => (
@@ -36,8 +36,8 @@ export default function Page() {
         </div>
       </section>
       <PreviousClients />
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <SectionHeader eyebrow="Logo index" title="Client associations represented in the Matrix portfolio." />
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {previousClients.map((client, index) => (

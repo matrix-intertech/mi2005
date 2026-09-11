@@ -28,7 +28,7 @@ function HeaderContent() {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
+    <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
       <Link href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
         <img src="/images/matrix/logo.png" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
       </Link>

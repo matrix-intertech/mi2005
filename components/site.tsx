@@ -10,7 +10,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       {children}
       <footer className="bg-charcoal text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_.65fr_.65fr_.65fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1.25fr_.6fr_.6fr_.6fr]">
           <div>
             <img src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" className="h-14 w-auto max-w-[240px] object-contain" />
             <p className="mt-4 max-w-xl text-base leading-7 text-white/70">Interior, architecture and turnkey implementation for corporate, residential and commercial projects.</p>
@@ -45,10 +45,10 @@ export function SectionHeader({ eyebrow, title, text, inverse = false }: { eyebr
 
 export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; title: string; text: string; image: string }) {
   return (
-    <section className="relative isolate min-h-[56svh] overflow-hidden bg-charcoal px-5 py-20 sm:min-h-[62vh] sm:py-24 text-white sm:px-8">
+    <section className="relative isolate min-h-[56svh] overflow-hidden bg-charcoal px-5 py-20 sm:min-h-[62vh] sm:py-24 text-white sm:px-6">
       <ParallaxImage src={image} alt="" priority className="absolute inset-0 -z-10" imgClassName="opacity-50" strength={30} />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(16,24,32,.96),rgba(16,24,32,.72),rgba(16,24,32,.18))]" />
-      <div className="mx-auto flex min-h-[38vh] max-w-7xl items-end sm:min-h-[44vh]">
+      <div className="mx-auto flex min-h-[38vh] max-w-[92rem] items-end sm:min-h-[44vh]">
         <SectionReveal className="max-w-4xl pb-4">
           <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-gold">{eyebrow}</p>
           <h1 className="mt-5 max-w-5xl text-4xl font-semibold leading-[1.08] sm:text-5xl lg:text-6xl">{title}</h1>
@@ -60,14 +60,14 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
 }
 
 export function TrustStrip() {
-  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-5 py-7 sm:px-8 md:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/58">{item.label}</div></div></SectionReveal>)}</div></section>;
+  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-5 px-5 py-7 sm:px-6 md:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/58">{item.label}</div></div></SectionReveal>)}</div></section>;
 }
 
 
 export function PreviousClients() {
   return (
-    <section className="bg-warm px-5 py-14 sm:px-8 sm:py-20">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-[92rem]">
         <SectionReveal className="mx-auto max-w-4xl text-center">
           <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">Previous clients</p>
           <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] text-charcoal sm:text-5xl">Trusted by leading brands across India.</h2>
@@ -93,8 +93,8 @@ export function PreviousClients() {
 }
 export function EnquiryCTA({ image = "/images/matrix/contact.webp" }: { image?: string }) {
   return (
-    <section className="bg-charcoal px-5 py-14 text-white sm:py-18 sm:px-8">
-      <SectionReveal className="mx-auto grid max-w-7xl overflow-hidden rounded-sm border border-white/10 bg-white/5 lg:grid-cols-[.95fr_1.05fr]">
+    <section className="bg-charcoal px-5 py-14 text-white sm:py-18 sm:px-6">
+      <SectionReveal className="mx-auto grid max-w-[92rem] overflow-hidden rounded-sm border border-white/10 bg-white/5 lg:grid-cols-[.9fr_1.1fr]">
         <ParallaxImage src={image} alt="" className="min-h-[240px] sm:min-h-[320px]" strength={16} />
         <div className="p-7 sm:p-10 lg:p-12">
           <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-gold">Project enquiry</p>

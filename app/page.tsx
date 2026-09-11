@@ -22,7 +22,7 @@ export default function Home() {
       <section className="relative isolate min-h-[72svh] overflow-hidden sm:min-h-[80vh] bg-charcoal text-white">
         <ParallaxImage src="/images/matrix/hero-studio.webp" alt="Premium architecture and interior design studio" priority className="absolute inset-0 -z-10" imgClassName="opacity-58" strength={28} />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(16,24,32,.96),rgba(16,24,32,.68),rgba(16,24,32,.18))]" />
-        <div className="mx-auto flex min-h-[72svh] max-w-7xl sm:min-h-[80vh] items-end px-5 pb-16 pt-24 sm:px-8">
+        <div className="mx-auto flex min-h-[72svh] max-w-[92rem] sm:min-h-[80vh] items-end px-5 pb-16 pt-24 sm:px-6">
           <StaggerReveal className="max-w-5xl -translate-y-7 sm:-translate-y-10 lg:-translate-y-14">
             <StaggerItem><p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Matrix Intertech Pvt. Ltd.</p></StaggerItem>
             <StaggerItem><h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-[1.03] sm:text-6xl lg:text-7xl">Turnkey interiors with architectural discipline.</h1></StaggerItem>
@@ -37,8 +37,8 @@ export default function Home() {
 
       <TrustStrip />
 
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.9fr_1.1fr]">
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.78fr_1.22fr]">
           <SectionHeader eyebrow="Who we are" title="A project partner for spaces that need to look refined and work hard." text="Matrix Intertech creates interior, architecture and turnkey implementation solutions for corporate, commercial and residential spaces. Since 2005, the team has delivered projects across India with disciplined coordination from concept to handover." />
           <div className="grid gap-4 sm:grid-cols-2">
             {strengths.map(({ icon: Icon, title, text }, index) => (
@@ -53,8 +53,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-charcoal px-5 py-16 text-white sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-charcoal px-5 py-16 text-white sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeader eyebrow="Services" title="Interior, architecture and fitout expertise for real spaces." inverse /><Link href="/contact-us/" className="inline-flex items-center gap-2 text-sm font-semibold text-gold">Plan your scope <ArrowRight className="h-4 w-4" /></Link></div>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {services.map((service, index) => (
@@ -69,8 +69,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-warm px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Projects" title="Strong spaces, clearly organized around how people use them." />
+      <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-[92rem]"><SectionHeader eyebrow="Projects" title="Strong spaces, clearly organized around how people use them." />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {projects.map((project, index) => (
               <SectionReveal key={project.title} delay={index * 0.05} className="h-full">
@@ -83,8 +83,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+      <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <ParallaxImage src="/images/matrix/process.webp" alt="Turnkey planning and site execution table" className="min-h-[300px] sm:min-h-[420px] lg:min-h-[460px]" strength={16} />
           <div><SectionHeader eyebrow="Process" title="A timeline built around decisions, drawings and site momentum." />
             <div className="mt-9 grid gap-5">
