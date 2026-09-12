@@ -29,8 +29,10 @@ export default async function ApplicationsPage({ searchParams }: { searchParams:
           phone: item.phone,
           role: item.role,
           experience: item.experience,
+          portfolioOrResumeUrl: item.portfolioOrResumeUrl || item.portfolioUrl || item.resumeUrl,
           portfolioUrl: item.portfolioUrl,
           resumeUrl: item.resumeUrl,
+          createdAt: item.createdAt ? item.createdAt.toISOString() : "",
           status: item.status,
         }))}
       />

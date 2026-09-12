@@ -4,6 +4,14 @@ export type EnquiryStatus = "new" | "read" | "archived";
 export type CareerStatus = "open" | "closed";
 export type ApplicationStatus = "new" | "reviewed" | "archived";
 
+export interface RequiredApplicationFields {
+  phone?: boolean;
+  email?: boolean;
+  portfolioOrResumeUrl?: boolean;
+  experience?: boolean;
+  coverLetter?: boolean;
+}
+
 export interface Enquiry {
   _id?: ObjectId;
   name: string;
@@ -17,6 +25,7 @@ export interface Enquiry {
   status: EnquiryStatus;
   source: "contact" | "project-enquiry";
   createdAt: Date;
+  updatedAt?: Date;
 }
 
 export interface CareerOpening {
@@ -29,6 +38,7 @@ export interface CareerOpening {
   summary: string;
   responsibilities: string;
   requirements: string;
+  requiredFields?: RequiredApplicationFields;
   status: CareerStatus;
   createdAt: Date;
   updatedAt: Date;
@@ -42,9 +52,11 @@ export interface CareerApplication {
   email: string;
   phone: string;
   experience: string;
+  portfolioOrResumeUrl?: string;
   portfolioUrl?: string;
   resumeUrl?: string;
   message: string;
   status: ApplicationStatus;
   createdAt: Date;
+  updatedAt?: Date;
 }

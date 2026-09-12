@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { updateEnquiryStatus } from "@/lib/admin-actions";
 
 type EnquiryRow = {
@@ -28,6 +29,7 @@ export function EnquiriesClient({ enquiries }: EnquiriesClientProps) {
             <th className="p-4">Message</th>
             <th className="p-4">Received</th>
             <th className="p-4">Status</th>
+            <th className="p-4">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -63,6 +65,9 @@ export function EnquiriesClient({ enquiries }: EnquiriesClientProps) {
                     <option value="archived">Archived</option>
                   </select>
                 </form>
+              </td>
+              <td className="p-4">
+                <Link href={`/dashboard/enquiries/${item.id}`} className="inline-flex border border-charcoal/15 bg-white px-3 py-2 text-sm font-semibold text-charcoal hover:border-bronze hover:text-bronze">View details</Link>
               </td>
             </tr>
           ))}
