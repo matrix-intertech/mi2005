@@ -26,6 +26,7 @@ export default function Home() {
           <StaggerReveal className="max-w-5xl -translate-y-7 sm:-translate-y-10 lg:-translate-y-14">
             <StaggerItem><p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Matrix Intertech Pvt. Ltd.</p></StaggerItem>
             <StaggerItem><h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-[1.03] sm:text-6xl lg:text-7xl">Turnkey interiors with architectural discipline.</h1></StaggerItem>
+            <StaggerItem><p className="mt-5 max-w-3xl text-xl font-semibold leading-8 text-gold sm:text-2xl">Shaping The Ideas, Building The Reality</p></StaggerItem>
             <StaggerItem><p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">Founded in 2005, Matrix Intertech creates corporate, commercial and residential spaces from concept through execution and handover.</p></StaggerItem>
             <StaggerItem className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a project <ArrowRight className="h-4 w-4" /></Link>

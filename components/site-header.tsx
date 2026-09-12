@@ -1,10 +1,12 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { ChevronDown, Menu } from "lucide-react";
+import { BadgeCheck, ChevronDown, Menu } from "lucide-react";
 import { motion, useReducedMotion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { aboutItems, navItems } from "@/lib/site-data";
+
+const isoCertificatePath = "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf";
 
 export function SiteHeader() {
   const { scrollY } = useScroll();
@@ -56,7 +58,13 @@ function HeaderContent() {
         </div>
         {navItems.slice(1).map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}
       </nav>
-      <Link href="/contact-us" className="hidden rounded-sm bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bronze sm:inline-flex">Start enquiry</Link>
+      <div className="hidden items-center gap-3 sm:flex">
+        <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-sm border border-bronze/30 bg-white/65 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-charcoal/78 transition hover:border-bronze hover:text-bronze xl:inline-flex" aria-label="View ISO 9001 certificate PDF">
+          <BadgeCheck className="h-4 w-4 text-bronze" aria-hidden="true" />
+          ISO Certified
+        </a>
+        <Link href="/contact-us" className="hidden rounded-sm bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bronze sm:inline-flex">Start enquiry</Link>
+      </div>
       <details className="relative lg:hidden" open={mobileOpen} onToggle={(event) => setMobileOpen(event.currentTarget.open)}>
         <summary className="flex cursor-pointer list-none items-center rounded-sm border border-charcoal/15 p-2 focus:outline-none focus:ring-4 focus:ring-bronze/20" aria-controls="mobile-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
           <Menu className="h-5 w-5" aria-hidden="true" />

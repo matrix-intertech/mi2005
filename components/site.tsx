@@ -1,8 +1,10 @@
 ﻿import Link from "next/link";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, BadgeCheck, Mail, Phone } from "lucide-react";
 import { aboutItems, contact, navItems, previousClients, services, trustItems } from "@/lib/site-data";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
 import { SiteHeader } from "@/components/site-header";
+
+const isoCertificatePath = "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf";
 
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
@@ -14,6 +16,13 @@ export function PageShell({ children }: { children: React.ReactNode }) {
           <div>
             <img src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" className="h-14 w-auto max-w-[240px] object-contain" />
             <p className="mt-4 max-w-xl text-base leading-7 text-white/70">Interior, architecture and turnkey implementation for corporate, residential and commercial projects.</p>
+            <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="mt-5 inline-flex max-w-sm items-center gap-3 rounded-sm border border-white/12 bg-white/6 px-4 py-3 text-left transition hover:border-gold/60 hover:bg-white/10" aria-label="View ISO 9001 certificate PDF">
+              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-gold text-charcoal"><BadgeCheck className="h-5 w-5" aria-hidden="true" /></span>
+              <span>
+                <span className="block text-sm font-semibold text-white">ISO Certified Company</span>
+                <span className="mt-1 block text-sm leading-5 text-white/62">Quality-led interiors, architecture and turnkey execution.</span>
+              </span>
+            </a>
             <div className="mt-6 flex flex-col gap-3 text-base text-white/70 sm:flex-row sm:gap-6">
               <span className="inline-flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> {contact.phone}</span>
               <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> {contact.email}</span>
