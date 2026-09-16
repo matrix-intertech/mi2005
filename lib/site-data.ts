@@ -81,7 +81,7 @@ export const companyFacts = [
 export const contact = {
   address: "G-68/B, LGF, Kalkaji, New Delhi",
   phone: "011-41707617 Ext: 101",
-  email: "it.team@matrixonline.in",
+  email: "sales@matrixonline.in",
 };
 
 export const previousClients = [
