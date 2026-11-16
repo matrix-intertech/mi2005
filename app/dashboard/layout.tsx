@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BriefcaseBusiness, Inbox, LayoutDashboard } from "lucide-react";
+import { BriefcaseBusiness, Building2, Inbox, LayoutDashboard } from "lucide-react";
 import { requireAdmin } from "@/lib/admin";
 import { LogoutButton } from "@/components/logout-button";
 
@@ -12,6 +12,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
     { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
     { href: "/dashboard/enquiries", label: "Enquiries", icon: Inbox },
     { href: "/dashboard/careers", label: "Careers", icon: BriefcaseBusiness },
+    { href: "/dashboard/portfolio", label: "Portfolio Management", icon: Building2 },
     { href: "/dashboard/applications", label: "Applications", icon: Inbox },
   ];
 

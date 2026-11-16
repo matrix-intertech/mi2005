@@ -174,3 +174,68 @@ Put the printed hash in `ADMIN_PASSWORD_HASH`, then restart the Node process aft
 ```sh
 pm2 restart matrix-intertech-new --update-env
 ```
+
+
+## Portfolio Management (Node.js VPS)
+
+Admin clients are managed at `/dashboard/portfolio` using the existing admin session.
+The `portfolioClients` MongoDB collection stores metadata only. All management APIs
+under `/api/admin/portfolio` require an admin session, including list requests.
+POST creates a client with multipart form data; PATCH `/[id]` updates any submitted
+fields, visibility, order, or logo; DELETE `/[id]` removes the record. PATCH requires
+its current `updatedAt`; DELETE supplies that value in `If-Unmodified-Since`.
+POST requires a UUID `submissionId` so retries cannot create duplicate records.
+
+Run this explicit import once before deploying the database-backed public section:
+
+```sh
+npm run portfolio:seed
+```
+
+The import uses `lib/portfolio-seed.json`, preserves the original 11 names, local
+assets, and order, creates the required indexes, and only inserts missing records.
+It does not overwrite admin edits on repeat runs. It never runs during builds or
+page requests. Re-running it after deliberately deleting an imported client will
+restore that missing client; do not schedule it as part of every deployment.
+The static seed is migration input only; the public website reads MongoDB.
+
+Only Public clients are displayed, ordered by display order then company name.
+The entire Previous Clients section is hidden when no public clients exist or the
+database cannot be reached. Updates are read on each public request, including the
+home, projects, who-we-are, and clients pages. No rebuild is needed.
+
+Uploads accept PNG, JPEG, WebP and self-contained SVG, up to 2 MB and 16 megapixels.
+The server checks extension, MIME and decoded format and converts uploads to WebP
+with generated UUID names. SVG scripts, embedded/external resources and entities
+are rejected. Files are served through `/api/portfolio-logos/[filename]`, which
+supports uploads made after the Next.js process starts. Missing images display the
+company name. Replaced/deleted uploaded files are removed only after the database
+write succeeds and only when no record references them. Original bundled assets
+are never deleted.
+
+### Persistent upload directory and permissions
+
+The default is `public/uploads/clients/`, ignored by Git except `.gitkeep`.
+The app creates it if needed, but its parent must be writable by the Node process.
+For deployments that replace the checkout, set `PORTFOLIO_UPLOAD_DIR` to a shared
+absolute directory outside the release tree. For example, on Linux (replace
+`matrix` with the actual PM2 service user and group):
+
+```sh
+sudo install -d -o matrix -g matrix -m 0750 /var/lib/matrix/portfolio-clients
+# In the server environment, not committed to Git:
+# PORTFOLIO_UPLOAD_DIR=/var/lib/matrix/portfolio-clients
+pm2 restart matrix-intertech-new --update-env
+```
+
+The process needs directory read/write/execute permission; uploaded files are mode
+0640. Do not use world-writable permissions. Persist and back up the upload directory
+alongside MongoDB. Exclude it from deployment cleanup, `rsync --delete`, and release
+replacement. For the default directory, preserve or mount `public/uploads/clients`
+between releases. Builds do not delete uploads. Multiple app instances must share
+the same persistent directory. Allow multipart requests slightly above 2 MB at the
+reverse proxy (for example Nginx `client_max_body_size 3m`); the API still enforces
+the 2 MB file limit. Keep Node.js at the version required in `package.json`.
+
+Implementation references: [Next.js route handlers](https://nextjs.org/docs/app/getting-started/route-handlers)
+and [Sharp image validation limits](https://sharp.pixelplumbing.com/api-constructor/).

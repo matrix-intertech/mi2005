@@ -1,6 +1,9 @@
+import { connection } from "next/server";
+import { publicClients } from "@/lib/portfolio";
+import { ClientLogo } from "@/components/client-logo";
 ﻿import Link from "next/link";
 import { ArrowRight, BadgeCheck, Mail, Phone } from "lucide-react";
-import { aboutItems, contact, navItems, previousClients, services, trustItems } from "@/lib/site-data";
+import { aboutItems, contact, navItems, services, trustItems } from "@/lib/site-data";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
 import { SiteHeader } from "@/components/site-header";
 
@@ -75,7 +78,10 @@ export function TrustStrip() {
 }
 
 
-export function PreviousClients() {
+export async function PreviousClients() {
+  await connection();
+  const clients = await publicClients();
+  if (!clients.length) return null;
   return (
     <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[92rem]">
@@ -90,10 +96,10 @@ export function PreviousClients() {
           </p>
         </SectionReveal>
         <div className="mt-9 flex flex-wrap justify-center gap-3">
-          {previousClients.map((client, index) => (
-            <SectionReveal key={client.name} delay={index * 0.025} className="h-full w-[calc(50%-0.375rem)] sm:w-[calc(33.333%-0.5rem)] lg:w-[calc(25%-0.5625rem)]">
+          {clients.map((client, index) => (
+            <SectionReveal key={client.id} delay={index * 0.025} className="h-full w-[calc(50%-0.375rem)] sm:w-[calc(33.333%-0.5rem)] lg:w-[calc(25%-0.5625rem)]">
               <div className="group flex h-[100px] w-full items-center justify-center border border-charcoal/10 bg-white px-4 py-3 text-center shadow-[0_18px_45px_rgba(16,24,32,.05)] transition hover:-translate-y-0.5 hover:border-bronze/40 hover:shadow-[0_24px_60px_rgba(16,24,32,.08)]">
-                <img src={client.logo} alt={`${client.name} logo`} loading="lazy" decoding="async" className="h-14 w-full max-w-[158px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
+                <ClientLogo src={client.logoUrl} alt={client.logoAlt} companyName={client.companyName} className="h-14 w-full max-w-[158px] object-contain opacity-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0" />
               </div>
             </SectionReveal>
           ))}

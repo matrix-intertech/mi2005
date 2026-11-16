@@ -1,0 +1,46 @@
+[
+  {
+    "companyName": "IndiGo",
+    "logoUrl": "/images/clients/indigo.webp"
+  },
+  {
+    "companyName": "Broaster",
+    "logoUrl": "/images/clients/broaster.webp"
+  },
+  {
+    "companyName": "91.1 FM Radio City",
+    "logoUrl": "/images/clients/radio-city.webp"
+  },
+  {
+    "companyName": "Ardilya Milan",
+    "logoUrl": "/images/clients/ardilya-milan.webp"
+  },
+  {
+    "companyName": "HDFC Bank",
+    "logoUrl": "/images/clients/hdfc-bank.webp"
+  },
+  {
+    "companyName": "Axis Bank",
+    "logoUrl": "/images/clients/axis-bank.webp"
+  },
+  {
+    "companyName": "Kotak Mahindra Bank",
+    "logoUrl": "/images/clients/kotak-mahindra-bank.webp"
+  },
+  {
+    "companyName": "ICICI Bank",
+    "logoUrl": "/images/clients/icici-bank.webp"
+  },
+  {
+    "companyName": "The Times of India",
+    "logoUrl": "/images/clients/times-of-india.webp"
+  },
+  {
+    "companyName": "IGT Solutions",
+    "logoUrl": "/images/clients/igt-solutions.webp"
+  },
+  {
+    "companyName": "Tata Projects Limited",
+    "logoUrl": "/images/clients/tata-projects.webp"
+  }
+]

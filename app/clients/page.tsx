@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight, Building2, Handshake, ShieldCheck } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, PreviousClients, SectionHeader } from "@/components/site";
 import { SectionReveal } from "@/components/motion";
-import { previousClients } from "@/lib/site-data";
 import { getRouteSeo } from "@/lib/seo";
 
 const seo = getRouteSeo("/clients");
@@ -38,17 +37,7 @@ export default function Page() {
       <PreviousClients />
       <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[92rem]">
-          <SectionHeader eyebrow="Logo index" title="Client associations represented in the Matrix portfolio." />
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {previousClients.map((client, index) => (
-              <SectionReveal key={client.name} delay={index * 0.025}>
-                <div className="flex h-28 items-center justify-center border border-charcoal/10 bg-warm px-5">
-                  <img src={client.logo} alt={`${client.name} logo`} className="h-14 w-full max-w-[160px] object-contain opacity-85 grayscale" loading="lazy" decoding="async" />
-                </div>
-              </SectionReveal>
-            ))}
-          </div>
-          <Link href="/contact-us/" className="mt-10 inline-flex items-center gap-2 rounded-sm bg-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-bronze">Discuss a project <ArrowRight className="h-4 w-4" /></Link>
+          <Link href="/contact-us/" className="inline-flex items-center gap-2 rounded-sm bg-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-bronze">Discuss a project <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
       <EnquiryCTA />

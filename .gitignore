@@ -55,3 +55,7 @@ dist
 /tmp/
 /build/
 /.qa/
+
+# Persistent portfolio uploads (keep across deployments)
+/public/uploads/clients/*
+!/public/uploads/clients/.gitkeep
