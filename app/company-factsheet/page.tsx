@@ -1,12 +1,10 @@
-﻿import type { Metadata } from "next";
 import { Building2, CheckCircle2, Clock3, ExternalLink, FileText, MapPinned, Ruler, Wrench } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, SectionHeader } from "@/components/site";
 import { SectionReveal } from "@/components/motion";
 import { contact } from "@/lib/site-data";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/company-factsheet");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/company-factsheet");
 
 const stats = [
   { value: "2005", label: "Founded" },
@@ -26,7 +24,7 @@ const sectors = ["Banking", "Corporate offices", "Retail", "Aviation", "Hospital
 
 export default function Page() {
   return (
-    <PageShell>
+    <PageShell seoPath="/company-factsheet">
       <PageHero eyebrow="Company factsheet" title="Matrix Intertech at a glance." text="A New Delhi based interior and architectural services company specializing in turnkey interiors, maintenance, space planning and complete project delivery." image="/images/matrix/process.webp" />
       <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[92rem]">

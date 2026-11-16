@@ -1,0 +1,3183 @@
+{
+  "generatedAt": "2026-11-16T13:19:08.645Z",
+  "base": "http://localhost:3110",
+  "databaseWrites": false,
+  "routes": [
+    {
+      "path": "/",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 24,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 24,
+          "brokenImages": []
+        }
+      ],
+      "title": "Matrix Intertech | Turnkey Interiors and Architecture",
+      "description": "Matrix Intertech delivers premium interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces.",
+      "canonical": "https://www.matrixonline.in/",
+      "canonicals": 1,
+      "h1": [
+        "Turnkey interiors with architectural discipline."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Matrix Intertech | Turnkey Interiors and Architecture",
+        "description": "Matrix Intertech delivers premium interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces.",
+        "url": "https://www.matrixonline.in",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Matrix Intertech | Turnkey Interiors and Architecture",
+        "description": "Matrix Intertech delivers premium interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://www.matrixonline.in/#organization",
+              "name": "Matrix Intertech",
+              "legalName": "Matrix Intertech Pvt. Ltd.",
+              "url": "https://www.matrixonline.in/",
+              "logo": "https://www.matrixonline.in/images/matrix/logo.png",
+              "foundingDate": "2005",
+              "telephone": "011-41707617 Ext: 101",
+              "email": "sales@matrixonline.in",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "G-68/B, LGF, Kalkaji",
+                "addressLocality": "New Delhi",
+                "addressCountry": "IN"
+              }
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://www.matrixonline.in/#website",
+              "url": "https://www.matrixonline.in/",
+              "name": "Matrix Intertech",
+              "publisher": {
+                "@id": "https://www.matrixonline.in/#organization"
+              },
+              "inLanguage": "en"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does Matrix Intertech do?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Matrix Intertech provides interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces, from concept and site inspection to finishes and handover."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where is Matrix Intertech based?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Founded in Delhi in 2005, Matrix Intertech is based at G-68/B, LGF, Kalkaji, New Delhi."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/projects",
+        "/contact-us",
+        "/real-estate/",
+        "/repair-and-maintenance/",
+        "/residential/",
+        "/commercial/",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/hero-studio.webp",
+          "alt": "Premium architecture and interior design studio",
+          "decorative": false,
+          "loaded": true,
+          "width": "1800",
+          "height": "771"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "Real Estate interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Repair and Maintenance interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "Residential interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "Commercial interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "Corporate Offices",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "Residential Apartments",
+          "decorative": false,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "Commercial Showrooms",
+          "decorative": false,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Project Execution",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Turnkey planning and site execution table",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/who-we-are",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 16,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 16,
+          "brokenImages": []
+        }
+      ],
+      "title": "Who We Are | Matrix Intertech",
+      "description": "Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.",
+      "canonical": "https://www.matrixonline.in/who-we-are",
+      "canonicals": 1,
+      "h1": [
+        "About Matrix Intertech"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Who We Are | Matrix Intertech",
+        "description": "Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.",
+        "url": "https://www.matrixonline.in/who-we-are",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Who We Are | Matrix Intertech",
+        "description": "Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Who We Are",
+                  "item": "https://www.matrixonline.in/who-we-are"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial",
+        "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+        "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/hero-studio.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1800",
+          "height": "771"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Matrix Intertech turnkey planning and site execution",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 0,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/about-us",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 16,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 16,
+          "brokenImages": []
+        }
+      ],
+      "title": "About Us | Matrix Intertech",
+      "description": "About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.",
+      "canonical": "https://www.matrixonline.in/about-us",
+      "canonicals": 1,
+      "h1": [
+        "About Matrix Intertech"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "About Us | Matrix Intertech",
+        "description": "About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.",
+        "url": "https://www.matrixonline.in/about-us",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "About Us | Matrix Intertech",
+        "description": "About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About Us",
+                  "item": "https://www.matrixonline.in/about-us"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial",
+        "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+        "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/hero-studio.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1800",
+          "height": "771"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Matrix Intertech turnkey planning and site execution",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 0,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/real-estate",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        }
+      ],
+      "title": "Real Estate Interiors | Matrix Intertech",
+      "description": "Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.",
+      "canonical": "https://www.matrixonline.in/real-estate",
+      "canonicals": 1,
+      "h1": [
+        "Real Estate"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Real Estate Interiors | Matrix Intertech",
+        "description": "Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.",
+        "url": "https://www.matrixonline.in/real-estate",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Real Estate Interiors | Matrix Intertech",
+        "description": "Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Real Estate Interiors",
+                  "item": "https://www.matrixonline.in/real-estate"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.matrixonline.in/real-estate#service",
+              "name": "Real Estate",
+              "serviceType": "Real Estate",
+              "description": "Experience centres, sales environments and project offices with confident presentation and dependable site execution.",
+              "url": "https://www.matrixonline.in/real-estate",
+              "image": "https://www.matrixonline.in/images/matrix/projects-office.webp",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.matrixonline.in/#organization",
+                "name": "Matrix Intertech",
+                "legalName": "Matrix Intertech Pvt. Ltd.",
+                "url": "https://www.matrixonline.in/",
+                "logo": "https://www.matrixonline.in/images/matrix/logo.png",
+                "foundingDate": "2005",
+                "telephone": "011-41707617 Ext: 101",
+                "email": "sales@matrixonline.in",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "G-68/B, LGF, Kalkaji",
+                  "addressLocality": "New Delhi",
+                  "addressCountry": "IN"
+                }
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does Matrix's real estate service cover?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Experience centres, sales environments and project offices with confident presentation and dependable site execution. Sales offices, sample environments and customer-facing real estate spaces. Spatial planning, finish coordination and site-ready execution support. A single team for design decisions, material coordination and handover readiness."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What information should I share for a project enquiry?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Share the site location, intended use, approximate area, scope and target timeline. The team can then discuss site conditions, design requirements and execution planning."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "Real Estate interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/repair-and-maintenance",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        }
+      ],
+      "title": "Repair and Maintenance | Matrix Intertech",
+      "description": "Repair, refurbishment and upgrade work for occupied offices, commercial spaces and residential properties with practical site planning.",
+      "canonical": "https://www.matrixonline.in/repair-and-maintenance",
+      "canonicals": 1,
+      "h1": [
+        "Repair and Maintenance"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Repair and Maintenance | Matrix Intertech",
+        "description": "Repair, refurbishment and upgrade work for occupied offices, commercial spaces and residential properties with practical site planning.",
+        "url": "https://www.matrixonline.in/repair-and-maintenance",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Repair and Maintenance | Matrix Intertech",
+        "description": "Repair, refurbishment and upgrade work for occupied offices, commercial spaces and residential properties with practical site planning.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Repair and Maintenance",
+                  "item": "https://www.matrixonline.in/repair-and-maintenance"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.matrixonline.in/repair-and-maintenance#service",
+              "name": "Repair and Maintenance",
+              "serviceType": "Repair and Maintenance",
+              "description": "Repair, refurbishment and upgrade work for occupied offices, commercial locations and residential properties.",
+              "url": "https://www.matrixonline.in/repair-and-maintenance",
+              "image": "https://www.matrixonline.in/images/matrix/process.webp",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.matrixonline.in/#organization",
+                "name": "Matrix Intertech",
+                "legalName": "Matrix Intertech Pvt. Ltd.",
+                "url": "https://www.matrixonline.in/",
+                "logo": "https://www.matrixonline.in/images/matrix/logo.png",
+                "foundingDate": "2005",
+                "telephone": "011-41707617 Ext: 101",
+                "email": "sales@matrixonline.in",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "G-68/B, LGF, Kalkaji",
+                  "addressLocality": "New Delhi",
+                  "addressCountry": "IN"
+                }
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does Matrix's repair and maintenance service cover?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Repair, refurbishment and upgrade work for occupied offices, commercial locations and residential properties. Condition assessment and practical repair planning. Civil, electrical, partition and finishing work for active spaces. Phased execution to reduce operational disruption."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What information should I share for a project enquiry?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Share the site location, intended use, approximate area, scope and target timeline. The team can then discuss site conditions, design requirements and execution planning."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Repair and Maintenance interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/residential",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        }
+      ],
+      "title": "Residential Interiors | Matrix Intertech",
+      "description": "Premium residential interiors for homes and apartments, planned around comfort, storage, finishes and long-term usability.",
+      "canonical": "https://www.matrixonline.in/residential",
+      "canonicals": 1,
+      "h1": [
+        "Residential"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Residential Interiors | Matrix Intertech",
+        "description": "Premium residential interiors for homes and apartments, planned around comfort, storage, finishes and long-term usability.",
+        "url": "https://www.matrixonline.in/residential",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Residential Interiors | Matrix Intertech",
+        "description": "Premium residential interiors for homes and apartments, planned around comfort, storage, finishes and long-term usability.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Residential Interiors",
+                  "item": "https://www.matrixonline.in/residential"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.matrixonline.in/residential#service",
+              "name": "Residential",
+              "serviceType": "Residential",
+              "description": "Homes and apartments shaped around comfort, storage, material quality and long-term usability.",
+              "url": "https://www.matrixonline.in/residential",
+              "image": "https://www.matrixonline.in/images/matrix/residential.webp",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.matrixonline.in/#organization",
+                "name": "Matrix Intertech",
+                "legalName": "Matrix Intertech Pvt. Ltd.",
+                "url": "https://www.matrixonline.in/",
+                "logo": "https://www.matrixonline.in/images/matrix/logo.png",
+                "foundingDate": "2005",
+                "telephone": "011-41707617 Ext: 101",
+                "email": "sales@matrixonline.in",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "G-68/B, LGF, Kalkaji",
+                  "addressLocality": "New Delhi",
+                  "addressCountry": "IN"
+                }
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does Matrix's residential service cover?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Homes and apartments shaped around comfort, storage, material quality and long-term usability. Interior layouts for homes, apartments and private residences. Material, lighting, electrical and furniture coordination. End-to-end execution from drawings to finished space."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What information should I share for a project enquiry?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Share the site location, intended use, approximate area, scope and target timeline. The team can then discuss site conditions, design requirements and execution planning."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "Residential interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/commercial",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        }
+      ],
+      "title": "Commercial Interiors | Matrix Intertech",
+      "description": "Commercial, corporate, retail, hospitality and institutional interiors delivered with turnkey coordination and handover-focused execution.",
+      "canonical": "https://www.matrixonline.in/commercial",
+      "canonicals": 1,
+      "h1": [
+        "Commercial"
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Commercial Interiors | Matrix Intertech",
+        "description": "Commercial, corporate, retail, hospitality and institutional interiors delivered with turnkey coordination and handover-focused execution.",
+        "url": "https://www.matrixonline.in/commercial",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Commercial Interiors | Matrix Intertech",
+        "description": "Commercial, corporate, retail, hospitality and institutional interiors delivered with turnkey coordination and handover-focused execution.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Commercial Interiors",
+                  "item": "https://www.matrixonline.in/commercial"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.matrixonline.in/commercial#service",
+              "name": "Commercial",
+              "serviceType": "Commercial",
+              "description": "Corporate, retail, hospitality and institutional interiors delivered with attention to quality, timelines and coordination.",
+              "url": "https://www.matrixonline.in/commercial",
+              "image": "https://www.matrixonline.in/images/matrix/commercial.webp",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.matrixonline.in/#organization",
+                "name": "Matrix Intertech",
+                "legalName": "Matrix Intertech Pvt. Ltd.",
+                "url": "https://www.matrixonline.in/",
+                "logo": "https://www.matrixonline.in/images/matrix/logo.png",
+                "foundingDate": "2005",
+                "telephone": "011-41707617 Ext: 101",
+                "email": "sales@matrixonline.in",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "G-68/B, LGF, Kalkaji",
+                  "addressLocality": "New Delhi",
+                  "addressCountry": "IN"
+                }
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What does Matrix's commercial service cover?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Corporate, retail, hospitality and institutional interiors delivered with attention to quality, timelines and coordination. Corporate offices, banks, hotels, showrooms and restaurants. Team coordination across design, services and execution vendors. Handover-focused delivery for teams that need dependable launch dates."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What information should I share for a project enquiry?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Share the site location, intended use, approximate area, scope and target timeline. The team can then discuss site conditions, design requirements and execution planning."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "Commercial interior design",
+          "decorative": false,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "Service",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/process",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 5,
+          "brokenImages": []
+        }
+      ],
+      "title": "Process | Matrix Intertech",
+      "description": "Matrix Intertech's turnkey process from site inspection and concept design through detailing, estimates, execution, finishes and handover.",
+      "canonical": "https://www.matrixonline.in/process",
+      "canonicals": 1,
+      "h1": [
+        "A precise path from inspection to handover."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Process | Matrix Intertech",
+        "description": "Matrix Intertech's turnkey process from site inspection and concept design through detailing, estimates, execution, finishes and handover.",
+        "url": "https://www.matrixonline.in/process",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Process | Matrix Intertech",
+        "description": "Matrix Intertech's turnkey process from site inspection and concept design through detailing, estimates, execution, finishes and handover.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Process",
+                  "item": "https://www.matrixonline.in/process"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What are the stages of a turnkey interiors project?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The process covers site inspection, concept and sketch, detailed design, estimate and agreement, site execution, then finishes and handover."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When are scope and costs agreed?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A detailed estimate is compiled from the design project so scope, materials and costs are visible before execution begins."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Project planning table and fitout site",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/projects",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 19,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 19,
+          "brokenImages": []
+        }
+      ],
+      "title": "Projects | Matrix Intertech",
+      "description": "Explore Matrix Intertech project categories across corporate offices, residential apartments, commercial showrooms and turnkey execution.",
+      "canonical": "https://www.matrixonline.in/projects",
+      "canonicals": 1,
+      "h1": [
+        "Project environments built for daily use and long-term impression."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Projects | Matrix Intertech",
+        "description": "Explore Matrix Intertech project categories across corporate offices, residential apartments, commercial showrooms and turnkey execution.",
+        "url": "https://www.matrixonline.in/projects",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Projects | Matrix Intertech",
+        "description": "Explore Matrix Intertech project categories across corporate offices, residential apartments, commercial showrooms and turnkey execution.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Projects",
+                  "item": "https://www.matrixonline.in/projects"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "Corporate Offices",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/residential.webp",
+          "alt": "Residential Apartments",
+          "decorative": false,
+          "loaded": true,
+          "width": "1774",
+          "height": "887"
+        },
+        {
+          "src": "/images/matrix/commercial.webp",
+          "alt": "Commercial Showrooms",
+          "decorative": false,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "Project Execution",
+          "decorative": false,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 0,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/career",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 4,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 4,
+          "brokenImages": []
+        }
+      ],
+      "title": "Career | Matrix Intertech",
+      "description": "Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.",
+      "canonical": "https://www.matrixonline.in/career",
+      "canonicals": 1,
+      "h1": [
+        "Build refined spaces with a practical project team."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Career | Matrix Intertech",
+        "description": "Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.",
+        "url": "https://www.matrixonline.in/career",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Career | Matrix Intertech",
+        "description": "Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Career",
+                  "item": "https://www.matrixonline.in/career"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How do I apply for an open role?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Review the current openings and their responsibilities and requirements, then complete the application form for the role. Required application fields are shown on the form."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Where can I find current vacancies?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Current vacancies are listed on this page. If no openings are listed, check this page again for future opportunities."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    },
+    {
+      "path": "/clients",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 15,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 15,
+          "brokenImages": []
+        }
+      ],
+      "title": "Our Clients | Matrix Intertech",
+      "description": "Explore Matrix Intertech client associations across banking, aviation, media, retail, infrastructure, hospitality and corporate interiors.",
+      "canonical": "https://www.matrixonline.in/clients",
+      "canonicals": 1,
+      "h1": [
+        "Trusted by leading brands across India."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Our Clients | Matrix Intertech",
+        "description": "Explore Matrix Intertech client associations across banking, aviation, media, retail, infrastructure, hospitality and corporate interiors.",
+        "url": "https://www.matrixonline.in/clients",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Our Clients | Matrix Intertech",
+        "description": "Explore Matrix Intertech client associations across banking, aviation, media, retail, infrastructure, hospitality and corporate interiors.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Our Clients",
+                  "item": "https://www.matrixonline.in/clients"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/contact-us",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/projects-office.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 0,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList"
+      ],
+      "clientLogos": [
+        {
+          "src": "/images/clients/indigo.webp",
+          "alt": "IndiGo",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/broaster.webp",
+          "alt": "Broaster",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/radio-city.webp",
+          "alt": "Radio City",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/ardilya-milan.webp",
+          "alt": "Ardilya Milan",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/hdfc-bank.webp",
+          "alt": "HDFC Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/axis-bank.webp",
+          "alt": "Axis Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/kotak-mahindra-bank.webp",
+          "alt": "Kotak Mahindra Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/icici-bank.webp",
+          "alt": "ICICI Bank",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/times-of-india.webp",
+          "alt": "The Times of India",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/igt-solutions.webp",
+          "alt": "IGT Solutions",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        },
+        {
+          "src": "/images/clients/tata-projects.webp",
+          "alt": "Tata Projects Limited",
+          "decorative": false,
+          "loaded": true,
+          "width": "158",
+          "height": "56"
+        }
+      ]
+    },
+    {
+      "path": "/company-factsheet",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 4,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 4,
+          "brokenImages": []
+        }
+      ],
+      "title": "Company Factsheet | Matrix Intertech",
+      "description": "Matrix Intertech company factsheet with founding year, Delhi base, turnkey interior capabilities, sectors served and contact details.",
+      "canonical": "https://www.matrixonline.in/company-factsheet",
+      "canonicals": 1,
+      "h1": [
+        "Matrix Intertech at a glance."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Company Factsheet | Matrix Intertech",
+        "description": "Matrix Intertech company factsheet with founding year, Delhi base, turnkey interior capabilities, sectors served and contact details.",
+        "url": "https://www.matrixonline.in/company-factsheet",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Company Factsheet | Matrix Intertech",
+        "description": "Matrix Intertech company factsheet with founding year, Delhi base, turnkey interior capabilities, sectors served and contact details.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Company Factsheet",
+                  "item": "https://www.matrixonline.in/company-factsheet"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/process.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1672",
+          "height": "941"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 0,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "path": "/contact-us",
+      "layouts": [
+        {
+          "width": 1440,
+          "overflow": false,
+          "images": 3,
+          "brokenImages": []
+        },
+        {
+          "width": 390,
+          "overflow": false,
+          "images": 3,
+          "brokenImages": []
+        }
+      ],
+      "title": "Contact | Matrix Intertech",
+      "description": "Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.",
+      "canonical": "https://www.matrixonline.in/contact-us",
+      "canonicals": 1,
+      "h1": [
+        "Start with the site, scope and timeline."
+      ],
+      "mainCount": 1,
+      "og": {
+        "title": "Contact | Matrix Intertech",
+        "description": "Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.",
+        "url": "https://www.matrixonline.in/contact-us",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "twitter": {
+        "title": "Contact | Matrix Intertech",
+        "description": "Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.",
+        "image": "https://www.matrixonline.in/images/matrix/hero-studio.webp"
+      },
+      "robots": "",
+      "schema": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.matrixonline.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://www.matrixonline.in/contact-us"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How can I contact Matrix Intertech about a project?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use the enquiry form on this page, email sales@matrixonline.in, or call 011-41707617 Ext: 101. Include the location, project type, approximate area and your requirements."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "links": [
+        "/",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/contact-us",
+        "/",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+        "/who-we-are",
+        "/about-us",
+        "/clients",
+        "/company-factsheet",
+        "/contact-us",
+        "/",
+        "/process",
+        "/projects",
+        "/career",
+        "/contact-us",
+        "/real-estate",
+        "/repair-and-maintenance",
+        "/residential",
+        "/commercial"
+      ],
+      "images": [
+        {
+          "src": "/images/matrix/logo.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "1302",
+          "height": "385"
+        },
+        {
+          "src": "/images/matrix/contact.webp",
+          "alt": "",
+          "decorative": true,
+          "loaded": true,
+          "width": "1536",
+          "height": "1024"
+        },
+        {
+          "src": "/images/matrix/logo_dark.png",
+          "alt": "Matrix Intertech logo",
+          "decorative": false,
+          "loaded": true,
+          "width": "450",
+          "height": "135"
+        }
+      ],
+      "faqCount": 1,
+      "logoIndex": false,
+      "schemaTypes": [
+        "BreadcrumbList",
+        "FAQPage"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/who-we-are",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/about-us",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/clients",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/company-factsheet",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/contact-us",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/process",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/projects",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/career",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/real-estate/",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/repair-and-maintenance/",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/residential/",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/commercial/",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/real-estate",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/repair-and-maintenance",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/residential",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/commercial",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/PDF/8.B.GST-Certificate.pdf",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-14001-final-150106EMS.pdf",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-45001-FINAL-COPY-BCI-150107OSHASH-.pdf",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/logo.png",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/hero-studio.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/projects-office.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/process.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/residential.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/commercial.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/indigo.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/broaster.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/radio-city.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/ardilya-milan.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/hdfc-bank.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/axis-bank.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/kotak-mahindra-bank.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/icici-bank.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/times-of-india.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/igt-solutions.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/clients/tata-projects.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/contact.webp",
+      "status": 200,
+      "internal": true
+    },
+    {
+      "href": "/images/matrix/logo_dark.png",
+      "status": 200,
+      "internal": true
+    }
+  ],
+  "privateRoutes": [
+    {
+      "path": "/login",
+      "status": 200,
+      "robots": "noindex, nofollow"
+    },
+    {
+      "path": "/dashboard",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/portfolio",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/careers",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/careers/new",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/careers/0123456789abcdef01234567",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/enquiries",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/enquiries/0123456789abcdef01234567",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/applications",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    },
+    {
+      "path": "/dashboard/applications/0123456789abcdef01234567",
+      "status": 307,
+      "robots": "noindex, nofollow",
+      "location": "/login"
+    }
+  ],
+  "failures": [],
+  "sitemapStatus": 200,
+  "sitemapXml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n<url>\n<loc>https://www.matrixonline.in/</loc>\n<changefreq>weekly</changefreq>\n<priority>1</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/who-we-are</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/about-us</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/real-estate</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/repair-and-maintenance</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/residential</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/commercial</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/process</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/projects</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/career</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/clients</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/company-factsheet</loc>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n<url>\n<loc>https://www.matrixonline.in/contact-us</loc>\n<changefreq>monthly</changefreq>\n<priority>0.9</priority>\n</url>\n</urlset>\n",
+  "sitemap": [
+    "https://www.matrixonline.in/",
+    "https://www.matrixonline.in/who-we-are",
+    "https://www.matrixonline.in/about-us",
+    "https://www.matrixonline.in/real-estate",
+    "https://www.matrixonline.in/repair-and-maintenance",
+    "https://www.matrixonline.in/residential",
+    "https://www.matrixonline.in/commercial",
+    "https://www.matrixonline.in/process",
+    "https://www.matrixonline.in/projects",
+    "https://www.matrixonline.in/career",
+    "https://www.matrixonline.in/clients",
+    "https://www.matrixonline.in/company-factsheet",
+    "https://www.matrixonline.in/contact-us"
+  ],
+  "robots": "User-Agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://www.matrixonline.in/sitemap.xml\n",
+  "missingCareer": {
+    "status": 404,
+    "robots": [
+      "noindex, nofollow",
+      "noindex"
+    ],
+    "schemas": 0
+  },
+  "authenticated": [
+    {
+      "path": "/dashboard",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Team dashboard"
+      ]
+    },
+    {
+      "path": "/dashboard/portfolio",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Portfolio Management"
+      ]
+    },
+    {
+      "path": "/dashboard/careers",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Career openings"
+      ]
+    },
+    {
+      "path": "/dashboard/careers/new",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "New opening"
+      ]
+    },
+    {
+      "path": "/dashboard/enquiries",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Enquiries"
+      ]
+    },
+    {
+      "path": "/dashboard/applications",
+      "robots": "noindex, nofollow",
+      "h1": [
+        "Applications"
+      ]
+    }
+  ],
+  "adminClientCount": 11
+}

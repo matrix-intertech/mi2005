@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://beta.simarone.com/",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://beta.simarone.com/clients",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://beta.simarone.com/commercial?seo-audit=1",
+    "status": 200,
+    "location": null
+  },
+  {
+    "url": "https://www.matrixonline.in/",
+    "status": 301,
+    "location": "https://matrixonline.in/"
+  },
+  {
+    "url": "https://www.matrixonline.in/clients",
+    "status": 301,
+    "location": "https://matrixonline.in/clients"
+  },
+  {
+    "url": "https://www.matrixonline.in/commercial?seo-audit=1",
+    "status": 301,
+    "location": "https://matrixonline.in/commercial/?seo-audit=1"
+  }
+]

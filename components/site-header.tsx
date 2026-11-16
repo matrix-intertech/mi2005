@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { BadgeCheck, ChevronDown, Menu } from "lucide-react";
@@ -32,7 +32,7 @@ function HeaderContent() {
   return (
     <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
       <Link href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
-        <img src="/images/matrix/logo.png" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
+        <img width={1302} height={385} src="/images/matrix/logo.png" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
       </Link>
       <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
         {navItems.slice(0, 1).map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}

@@ -1,8 +1,6 @@
-﻿import type { Metadata } from "next";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/contact-us");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/contact-us");
 import { Mail, MapPin, Phone } from "lucide-react";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { PageHero, PageShell, SectionHeader } from "@/components/site";
@@ -10,7 +8,7 @@ import { contact } from "@/lib/site-data";
 
 export default function Page() {
   return (
-    <PageShell>
+    <PageShell seoPath="/contact-us">
       <PageHero eyebrow="Contact" title="Start with the site, scope and timeline." text="Share project basics and the team can follow up with the right next step. Enquiries are delivered through the configured contact email workflow." image="/images/matrix/contact.webp" />
       <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.8fr_1.2fr]">

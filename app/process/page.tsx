@@ -1,15 +1,13 @@
-﻿import type { Metadata } from "next";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/process");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/process");
 import { EnquiryCTA, PageHero, PageShell, SectionHeader } from "@/components/site";
 import { MotionCard, ParallaxImage, SectionReveal } from "@/components/motion";
 import { processSteps } from "@/lib/site-data";
 
 export default function Page() {
   return (
-    <PageShell>
+    <PageShell seoPath="/process">
       <PageHero eyebrow="Process" title="A precise path from inspection to handover." text="A turnkey project needs decisions, documentation and site work to move in sequence. Matrix structures each stage so the final space is buildable, coordinated and ready for use." image="/images/matrix/process.webp" />
       <section className="bg-white px-5 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.9fr_1.1fr]">

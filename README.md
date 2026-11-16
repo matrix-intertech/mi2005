@@ -307,3 +307,64 @@ Run `npm run test:origin` for origin/CSRF regression tests.
 
 References: [Nginx proxy headers](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_set_header)
 and [Cloudflare X-Forwarded-Proto](https://developers.cloudflare.com/fundamentals/reference/http-headers/#x-forwarded-proto).
+
+
+## SEO and domain cutover
+
+Public canonical, Open Graph, Twitter, sitemap and structured-data URLs use
+`https://www.matrixonline.in`, independently of the admin CSRF `APP_URL` setting.
+Do not change authentication or SMTP configuration as part of an SEO release.
+
+- Deploy this build to the **www** host and ensure that host serves the application with HTTP 200.
+  Remove the current www-to-non-www redirect before enabling the opposite redirect.
+- In only the existing beta virtual hosts (HTTP and HTTPS), preserve their TLS configuration
+  and use `return 301 https://www.matrixonline.in$request_uri;`.
+  `$request_uri` preserves both path and query string. Do not redirect every URL to the homepage.
+- Redirect the non-www production host and HTTP variants to the corresponding HTTPS www URL.
+  Keep valid certificates for all HTTPS redirect hosts. Do not modify unrelated virtual hosts.
+- At the production cutover, configure the serving process with
+  `APP_URL=https://www.matrixonline.in` so the existing exact-origin CSRF guard matches the new host.
+  Preserve the existing session/authentication code.
+- The application proxy should overwrite `Host` and `X-Forwarded-Host` with `$host`,
+  and `X-Forwarded-Proto` with the trusted public scheme. For Nginx terminating TLS,
+  use `$scheme`. Behind Cloudflare use Full (strict) TLS; do not forward arbitrary client-supplied
+  forwarding headers unchanged. Restrict direct access to the application port.
+- Verify 301 Location headers for `/clients` and a path with a query string, with no redirect loop.
+  Submit `https://www.matrixonline.in/sitemap.xml` in Search Console after deployment.
+
+Career detail URLs are `/career/<MongoDB ObjectId>`. Only open, non-hidden, unexpired
+records enter the public listing and sitemap. Closed/hidden/missing detail URLs render
+404/noindex with no job markup. The sitemap is dynamic and requires MongoDB; an outage
+returns an error instead of publishing a partial sitemap that silently drops active jobs.
+No career or portfolio records are changed by the SEO implementation or audit.
+
+For Google-valid JobPosting data, each active opening must have a real title, summary,
+posting date and an explicit physical location in `City, Country` format, for example
+`New Delhi, India`. The country may also be an uppercase two-letter code. The schema
+uses only the recorded location; it does not invent a salary, expiry, country, or remote
+eligibility. Incomplete or ambiguous locations omit job markup and are reported by the
+crawler as failures. Remote-only jobs need separately verified eligibility data before
+adding remote job schema. Validate real job detail URLs in Google's Rich Results Test
+when active openings are available. Organization, WebSite, Service, BreadcrumbList and
+visible FAQ/answer content are included; no rich-result or AI-answer appearance is promised.
+
+Verification commands:
+
+```text
+npm run test:seo
+npm run build
+npm start -- -p 3110
+npm run audit:seo
+```
+
+`SEO_AUDIT_BASE` can point the crawler at a different running local build. Optional
+`QA_ADMIN_EMAIL` and `QA_ADMIN_PASSWORD` environment variables enable authenticated
+read-only dashboard checks; never commit those values. The crawl makes GET requests
+and optionally signs in; it does not create, edit or delete database records. Results
+are written to `reports/seo-audit.json`, screenshots to ignored `.qa/seo/`.
+The full audit handoff is `reports/seo-audit.html`; live redirect evidence is separate
+from the local application results in `reports/seo-live-redirects.json`.
+
+References: https://developers.google.com/search/docs/appearance/structured-data/job-posting
+and https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes
+and https://nginx.org/en/docs/http/ngx_http_rewrite_module.html#return

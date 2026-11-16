@@ -14,7 +14,9 @@
     "test:origin": "node --test tests/request-origin.test.mjs",
     "seed:portfolio": "node scripts/seed-portfolio.mjs",
     "portfolio:seed": "node scripts/seed-portfolio.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test:seo": "node --test tests/seo.test.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

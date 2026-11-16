@@ -1,6 +1,6 @@
-﻿import type { MetadataRoute } from "next";
+import type { Metadata, MetadataRoute } from "next";
 
-export const siteUrl = "https://matrixonline.in";
+export const siteUrl = "https://www.matrixonline.in";
 
 export const routeSeo = [
   {
@@ -77,16 +77,31 @@ export function getRouteSeo(path: RoutePath) {
 }
 
 export function absoluteUrl(path: string) {
-  return `${siteUrl}${path === "/" ? "" : path}`;
+  return `${siteUrl}${path}`;
 }
 
 export function sitemapEntries(): MetadataRoute.Sitemap {
   return routeSeo.map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified: new Date(),
     changeFrequency: route.path === "/" ? "weekly" : "monthly",
     priority: route.path === "/" ? 1 : route.path === "/contact-us" ? 0.9 : 0.7,
   }));
 }
 
 
+
+export function pageMetadata(path: string, title: string, description: string): Metadata {
+  const url = absoluteUrl(path);
+  const image = absoluteUrl("/images/matrix/hero-studio.webp");
+  return {
+    title, description, alternates: { canonical: url },
+    openGraph: { type: "website", url, siteName: "Matrix Intertech", title, description,
+      images: [{ url: image, width: 1800, height: 771, alt: "Architecture and interior design studio" }] },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+  };
+}
+
+export function routeMetadata(path: RoutePath): Metadata {
+  const route = getRouteSeo(path);
+  return pageMetadata(path, route.title, route.description);
+}

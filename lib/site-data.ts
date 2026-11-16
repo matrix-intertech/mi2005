@@ -1,4 +1,5 @@
-﻿export const aboutItems = [
+export const aboutItems = [
+  { href: "/who-we-are", label: "Who We Are" },
   { href: "/about-us", label: "Our Company" },
   { href: "/clients", label: "Our Clients" },
   { href: "/company-factsheet", label: "Company Factsheet" },

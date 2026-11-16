@@ -1,13 +1,11 @@
-﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Building2, CheckCircle2, Clock3, Compass, Download, ExternalLink, FileText, Handshake, Layers3, MapPinned, ShieldCheck, Sparkles } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, PreviousClients, SectionHeader, TrustStrip } from "@/components/site";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
 import { contact, projects, services } from "@/lib/site-data";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/who-we-are");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/who-we-are");
 
 const capabilityStats = [
   { value: "2005", label: "Founded in Delhi" },
@@ -65,9 +63,9 @@ export default function Page() {
   return <AboutPage />;
 }
 
-export function AboutPage() {
+export function AboutPage({ seoPath = "/who-we-are" }: { seoPath?: "/who-we-are" | "/about-us" }) {
   return (
-    <PageShell>
+    <PageShell seoPath={seoPath}>
       <PageHero
         eyebrow="Who we are"
         title="About Matrix Intertech"

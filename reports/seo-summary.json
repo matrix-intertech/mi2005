@@ -1,0 +1,172 @@
+{
+  "scope": "Local production build using existing temporary database; live redirect checks are separate",
+  "pass": 18,
+  "fail": 2,
+  "productionReady": false,
+  "checks": [
+    {
+      "id": 1,
+      "check": "Unique titles and descriptions",
+      "status": "PASS",
+      "evidence": "All 13 rendered public routes have nonempty, unique titles and descriptions. Dynamic job metadata includes a stable opening identifier."
+    },
+    {
+      "id": 2,
+      "check": "Self-referencing www canonicals",
+      "status": "PASS",
+      "evidence": "All 13 local routes point to their own https://www.matrixonline.in URL. This code has not been deployed; the live www host currently redirects away."
+    },
+    {
+      "id": 3,
+      "check": "No beta/localhost in SEO output",
+      "status": "PASS",
+      "evidence": "Rendered titles, descriptions, canonicals, social metadata, JSON-LD, sitemap and robots contain no beta or localhost URLs. Runtime APP_URL configuration is intentionally independent."
+    },
+    {
+      "id": 4,
+      "check": "Sitemap coverage and exclusions",
+      "status": "PASS",
+      "evidence": "13 canonical routes in the local sitemap; no login, dashboard or API routes. Active job URLs are added dynamically using the same visibility rule as the career list. Temporary DB has no jobs; actual production career coverage remains unverified. MongoDB is required at runtime."
+    },
+    {
+      "id": 5,
+      "check": "Robots sitemap URL",
+      "status": "PASS",
+      "evidence": "robots.txt references https://www.matrixonline.in/sitemap.xml."
+    },
+    {
+      "id": 6,
+      "check": "Private page noindex, nofollow",
+      "status": "PASS",
+      "evidence": "Login and all dashboard route patterns receive X-Robots-Tag. Login and six authenticated dashboard pages render noindex, nofollow metadata. Existing auth redirects remain intact."
+    },
+    {
+      "id": 7,
+      "check": "Homepage Organization and WebSite",
+      "status": "PASS",
+      "evidence": "Both JSON-LD objects render and parse, with production URLs and company facts from existing site content."
+    },
+    {
+      "id": 8,
+      "check": "Service schema",
+      "status": "PASS",
+      "evidence": "All four service routes emit Service JSON-LD with their own URL, description, image and provider."
+    },
+    {
+      "id": 9,
+      "check": "Internal BreadcrumbList",
+      "status": "PASS",
+      "evidence": "All 12 static internal public routes emit BreadcrumbList; the career detail implementation adds Home > Careers > Opening."
+    },
+    {
+      "id": 10,
+      "check": "Active JobPosting verification",
+      "status": "FAIL",
+      "evidence": "Verification pending: no real active openings are available in the temporary database and the configured database is unavailable. Dedicated pages and required-field/country validation pass in-memory fixture tests. Locations lacking an explicit country intentionally omit job markup; actual records must be reviewed without inventing data."
+    },
+    {
+      "id": 11,
+      "check": "Closed/hidden career indexing",
+      "status": "PASS",
+      "evidence": "Closed, hidden and expired records are excluded by the shared read-only visibility rule and fixture tests. Missing detail URL returns 404 with noindex and no schema. Existing closed/hidden production records were unavailable for runtime testing."
+    },
+    {
+      "id": 12,
+      "check": "One meaningful H1",
+      "status": "PASS",
+      "evidence": "All 13 public pages at both widths, login and six authenticated dashboard pages have one meaningful H1. Remaining dashboard detail components each define one H1 in source; there are no records to render those detail views."
+    },
+    {
+      "id": 13,
+      "check": "Image alt and stable dimensions",
+      "status": "PASS",
+      "evidence": "Every rendered image decodes and reserves dimensions. Content images and logos have descriptive alt text; decorative backgrounds use empty alt and aria-hidden. Logo cards retain object-contain."
+    },
+    {
+      "id": 14,
+      "check": "Visible answer content",
+      "status": "PASS",
+      "evidence": "Visible questions and answers on home, four services, process, career and contact. FAQPage markup matches the visible text; rich-result/AI answer placement is not promised."
+    },
+    {
+      "id": 15,
+      "check": "Production social metadata",
+      "status": "PASS",
+      "evidence": "Every route has page-specific OG/Twitter title and description. OG URLs and both sets of image URLs use absolute HTTPS www production URLs."
+    },
+    {
+      "id": 16,
+      "check": "Internal linking and crawlability",
+      "status": "PASS",
+      "evidence": "Every current canonical route is reachable from home through rendered anchor links. Added Who We Are navigation; job details link from the open-role list."
+    },
+    {
+      "id": 17,
+      "check": "No duplicate metadata/canonicals",
+      "status": "PASS",
+      "evidence": "No duplicate title, description or canonical across the 13 public routes. About Us and Who We Are still share much of their original body copy; content consolidation is a separate editorial decision."
+    },
+    {
+      "id": 18,
+      "check": "Production build",
+      "status": "PASS",
+      "evidence": "npm run build completed successfully after the final app source changes. Four SEO test groups pass. Existing Node JSON-module warnings are nonfatal."
+    },
+    {
+      "id": 19,
+      "check": "Broken links/images and responsive scan",
+      "status": "PASS",
+      "evidence": "40 unique internal linked pages/assets returned successful responses. All 13 routes scanned at 1440px and 390px: no broken decoded images or horizontal overflow. No external HTTP anchors were present. Client logos appear exactly once, with no Logo Index section."
+    },
+    {
+      "id": 20,
+      "check": "Beta path-preserving 301",
+      "status": "FAIL",
+      "evidence": "Live beta /, /clients and /commercial?seo-audit=1 return 200 instead of 301. Live www redirects to non-www. Hosting configuration must be corrected before launch; no virtual hosts were modified."
+    }
+  ],
+  "filesChanged": [
+    "README.md",
+    "app/about-us/page.tsx",
+    "app/career/[id]/page.tsx",
+    "app/career/page.tsx",
+    "app/clients/page.tsx",
+    "app/commercial/page.tsx",
+    "app/company-factsheet/page.tsx",
+    "app/contact-us/page.tsx",
+    "app/dashboard/layout.tsx",
+    "app/layout.tsx",
+    "app/login/page.tsx",
+    "app/not-found.tsx",
+    "app/page.tsx",
+    "app/process/page.tsx",
+    "app/projects/page.tsx",
+    "app/real-estate/page.tsx",
+    "app/repair-and-maintenance/page.tsx",
+    "app/residential/page.tsx",
+    "app/sitemap.ts",
+    "app/who-we-are/page.tsx",
+    "components/client-logo.tsx",
+    "components/motion.tsx",
+    "components/seo-content.tsx",
+    "components/service-page.tsx",
+    "components/site-header.tsx",
+    "components/site.tsx",
+    "lib/career-seo.ts",
+    "lib/image-dimensions.json",
+    "lib/public-careers.ts",
+    "lib/seo.ts",
+    "lib/site-data.ts",
+    "lib/structured-data.ts",
+    "next.config.ts",
+    "package.json",
+    "reports/seo-audit.html",
+    "reports/seo-audit.json",
+    "reports/seo-live-redirects.json",
+    "reports/seo-summary.json",
+    "reports/sitemap-audited.xml",
+    "scripts/audit-seo.mjs",
+    "scripts/render-seo-report.mjs",
+    "tests/seo.test.mjs"
+  ]
+}

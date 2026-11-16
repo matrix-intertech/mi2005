@@ -1,0 +1,34 @@
+{
+  "/images/matrix/commercial.webp": {
+    "width": 1536,
+    "height": 1024
+  },
+  "/images/matrix/contact.webp": {
+    "width": 1536,
+    "height": 1024
+  },
+  "/images/matrix/hero-studio.webp": {
+    "width": 1800,
+    "height": 771
+  },
+  "/images/matrix/logo.png": {
+    "width": 1302,
+    "height": 385
+  },
+  "/images/matrix/logo_dark.png": {
+    "width": 450,
+    "height": 135
+  },
+  "/images/matrix/process.webp": {
+    "width": 1672,
+    "height": 941
+  },
+  "/images/matrix/projects-office.webp": {
+    "width": 1672,
+    "height": 941
+  },
+  "/images/matrix/residential.webp": {
+    "width": 1774,
+    "height": 887
+  }
+}

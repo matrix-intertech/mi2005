@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+import type { RoutePath } from "@/lib/seo";
+import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, SectionHeader } from "@/components/site";
 import { MotionCard, ParallaxImage, SectionReveal } from "@/components/motion";
@@ -7,11 +8,11 @@ import { services } from "@/lib/site-data";
 export function ServicePage({ slug }: { slug: string }) {
   const service = services.find((item) => item.slug === slug)!;
   return (
-    <PageShell>
+    <PageShell seoPath={`/${service.slug}` as RoutePath}>
       <PageHero eyebrow="Service" title={service.title} text={service.summary} image={service.image} />
       <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.98fr_1.02fr] lg:items-center">
-          <ParallaxImage src={service.image} alt="" className="min-h-[280px] sm:min-h-[420px] lg:min-h-[460px]" strength={16} />
+          <ParallaxImage src={service.image} alt={`${service.title} interior design`} className="min-h-[280px] sm:min-h-[420px] lg:min-h-[460px]" strength={16} />
           <div>
             <SectionHeader eyebrow="Scope" title={`A complete delivery lens for ${service.title.toLowerCase()}.`} text="Each engagement is shaped around site conditions, practical detailing, finish quality and dependable handover." />
             <div className="mt-9 grid gap-4">

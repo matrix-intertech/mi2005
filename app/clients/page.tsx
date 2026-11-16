@@ -1,12 +1,10 @@
-﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Building2, Handshake, ShieldCheck } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, PreviousClients, SectionHeader } from "@/components/site";
 import { SectionReveal } from "@/components/motion";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/clients");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/clients");
 
 const trustNotes = [
   { icon: Building2, title: "Multi-sector delivery", text: "Experience across banking, aviation, media, retail, infrastructure, technology and hospitality environments." },
@@ -16,7 +14,7 @@ const trustNotes = [
 
 export default function Page() {
   return (
-    <PageShell>
+    <PageShell seoPath="/clients">
       <PageHero eyebrow="Our clients" title="Trusted by leading brands across India." text="Matrix Intertech has delivered interior, fit-out and turnkey execution work for organizations across banking, aviation, media, retail, infrastructure, hospitality and corporate sectors." image="/images/matrix/projects-office.webp" />
       <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.9fr_1.1fr]">

@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { BriefcaseBusiness, Building2, Inbox, LayoutDashboard } from "lucide-react";
 import { requireAdmin } from "@/lib/admin";
 import { LogoutButton } from "@/components/logout-button";
+
+export const metadata: Metadata = { title: "Admin dashboard | Matrix Intertech", robots: { index: false, follow: false }, alternates: { canonical: null }, openGraph: null, twitter: null };
 
 export const dynamic = "force-dynamic";
 

@@ -1,0 +1,140 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Matrix Intertech SEO and AEO audit</title><style>
+body{font:16px/1.6 system-ui,sans-serif;margin:0;color:#16242c;background:#f5f2ed}main{max-width:1280px;margin:auto;padding:36px 24px}h1{font-size:38px;line-height:1.15}h2{margin-top:40px}p{max-width:1000px}.status{padding:18px;background:#fff0d5;border-left:5px solid #ac701d}.scroll{overflow:auto;background:white}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;border:1px solid #ddd;padding:12px}th{background:#e8e1d6}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:20px;font-size:13px}code{overflow-wrap:anywhere}a{color:#245f7d}li{margin:8px 0}.small{font-size:14px;color:#4b5961}
+</style></head><body><main><h1>Matrix Intertech SEO and AEO audit</h1>
+<p class="status"><strong>18 PASS / 2 FAIL (verification or deployment pending).</strong> Local implementation and production build pass. The site is not yet verified production-ready.</p>
+<p>Generated 2026-11-16T13:19:08.645Z. Scope: all 13 public routes in a locally served production build, 1440px desktop and 390px mobile; login and protected dashboard routes; live beta/www response headers. The configured MongoDB connection is unavailable. Per the earlier temporary-database authorization, rendering used the existing temporary database containing 11 portfolio clients and zero careers. No MongoDB data, SMTP settings or authentication logic was changed. Signing in only created an ephemeral browser session.</p>
+<h2>Initial gaps corrected</h2><p>Before the changes, canonical metadata used the non-www domain, the career list inherited the homepage canonical, social metadata was inherited from home, private dashboard indexing directives were absent, login had two H1 elements, JSON-LD and answer sections were missing, and image attributes did not consistently reserve dimensions. The static-only sitemap could not enumerate career openings.</p>
+<h2>Final PASS/FAIL report</h2><div class="scroll"><table><thead><tr><th>#</th><th>Check</th><th>Result</th><th>Evidence and limits</th></tr></thead><tbody><tr><td>1</td><td>Unique titles and descriptions</td><td>PASS</td><td>All 13 rendered public routes have nonempty, unique titles and descriptions. Dynamic job metadata includes a stable opening identifier.</td></tr><tr><td>2</td><td>Self-referencing www canonicals</td><td>PASS</td><td>All 13 local routes point to their own https://www.matrixonline.in URL. This code has not been deployed; the live www host currently redirects away.</td></tr><tr><td>3</td><td>No beta/localhost in SEO output</td><td>PASS</td><td>Rendered titles, descriptions, canonicals, social metadata, JSON-LD, sitemap and robots contain no beta or localhost URLs. Runtime APP_URL configuration is intentionally independent.</td></tr><tr><td>4</td><td>Sitemap coverage and exclusions</td><td>PASS</td><td>13 canonical routes in the local sitemap; no login, dashboard or API routes. Active job URLs are added dynamically using the same visibility rule as the career list. Temporary DB has no jobs; actual production career coverage remains unverified. MongoDB is required at runtime.</td></tr><tr><td>5</td><td>Robots sitemap URL</td><td>PASS</td><td>robots.txt references https://www.matrixonline.in/sitemap.xml.</td></tr><tr><td>6</td><td>Private page noindex, nofollow</td><td>PASS</td><td>Login and all dashboard route patterns receive X-Robots-Tag. Login and six authenticated dashboard pages render noindex, nofollow metadata. Existing auth redirects remain intact.</td></tr><tr><td>7</td><td>Homepage Organization and WebSite</td><td>PASS</td><td>Both JSON-LD objects render and parse, with production URLs and company facts from existing site content.</td></tr><tr><td>8</td><td>Service schema</td><td>PASS</td><td>All four service routes emit Service JSON-LD with their own URL, description, image and provider.</td></tr><tr><td>9</td><td>Internal BreadcrumbList</td><td>PASS</td><td>All 12 static internal public routes emit BreadcrumbList; the career detail implementation adds Home &gt; Careers &gt; Opening.</td></tr><tr><td>10</td><td>Active JobPosting verification</td><td>FAIL</td><td>Verification pending: no real active openings are available in the temporary database and the configured database is unavailable. Dedicated pages and required-field/country validation pass in-memory fixture tests. Locations lacking an explicit country intentionally omit job markup; actual records must be reviewed without inventing data.</td></tr><tr><td>11</td><td>Closed/hidden career indexing</td><td>PASS</td><td>Closed, hidden and expired records are excluded by the shared read-only visibility rule and fixture tests. Missing detail URL returns 404 with noindex and no schema. Existing closed/hidden production records were unavailable for runtime testing.</td></tr><tr><td>12</td><td>One meaningful H1</td><td>PASS</td><td>All 13 public pages at both widths, login and six authenticated dashboard pages have one meaningful H1. Remaining dashboard detail components each define one H1 in source; there are no records to render those detail views.</td></tr><tr><td>13</td><td>Image alt and stable dimensions</td><td>PASS</td><td>Every rendered image decodes and reserves dimensions. Content images and logos have descriptive alt text; decorative backgrounds use empty alt and aria-hidden. Logo cards retain object-contain.</td></tr><tr><td>14</td><td>Visible answer content</td><td>PASS</td><td>Visible questions and answers on home, four services, process, career and contact. FAQPage markup matches the visible text; rich-result/AI answer placement is not promised.</td></tr><tr><td>15</td><td>Production social metadata</td><td>PASS</td><td>Every route has page-specific OG/Twitter title and description. OG URLs and both sets of image URLs use absolute HTTPS www production URLs.</td></tr><tr><td>16</td><td>Internal linking and crawlability</td><td>PASS</td><td>Every current canonical route is reachable from home through rendered anchor links. Added Who We Are navigation; job details link from the open-role list.</td></tr><tr><td>17</td><td>No duplicate metadata/canonicals</td><td>PASS</td><td>No duplicate title, description or canonical across the 13 public routes. About Us and Who We Are still share much of their original body copy; content consolidation is a separate editorial decision.</td></tr><tr><td>18</td><td>Production build</td><td>PASS</td><td>npm run build completed successfully after the final app source changes. Four SEO test groups pass. Existing Node JSON-module warnings are nonfatal.</td></tr><tr><td>19</td><td>Broken links/images and responsive scan</td><td>PASS</td><td>40 unique internal linked pages/assets returned successful responses. All 13 routes scanned at 1440px and 390px: no broken decoded images or horizontal overflow. No external HTTP anchors were present. Client logos appear exactly once, with no Logo Index section.</td></tr><tr><td>20</td><td>Beta path-preserving 301</td><td>FAIL</td><td>Live beta /, /clients and /commercial?seo-audit=1 return 200 instead of 301. Live www redirects to non-www. Hosting configuration must be corrected before launch; no virtual hosts were modified.</td></tr></tbody></table></div>
+<h2>Route-by-route metadata</h2><div class="scroll"><table><thead><tr><th>Route</th><th>Title</th><th>Meta description</th><th>Canonical</th><th>JSON-LD</th></tr></thead><tbody><tr><td>/</td><td>Matrix Intertech | Turnkey Interiors and Architecture</td><td>Matrix Intertech delivers premium interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces.</td><td>https://www.matrixonline.in/</td><td>Organization, WebSite, FAQPage</td></tr><tr><td>/who-we-are</td><td>Who We Are | Matrix Intertech</td><td>Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.</td><td>https://www.matrixonline.in/who-we-are</td><td>BreadcrumbList</td></tr><tr><td>/about-us</td><td>About Us | Matrix Intertech</td><td>About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.</td><td>https://www.matrixonline.in/about-us</td><td>BreadcrumbList</td></tr><tr><td>/real-estate</td><td>Real Estate Interiors | Matrix Intertech</td><td>Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.</td><td>https://www.matrixonline.in/real-estate</td><td>BreadcrumbList, Service, FAQPage</td></tr><tr><td>/repair-and-maintenance</td><td>Repair and Maintenance | Matrix Intertech</td><td>Repair, refurbishment and upgrade work for occupied offices, commercial spaces and residential properties with practical site planning.</td><td>https://www.matrixonline.in/repair-and-maintenance</td><td>BreadcrumbList, Service, FAQPage</td></tr><tr><td>/residential</td><td>Residential Interiors | Matrix Intertech</td><td>Premium residential interiors for homes and apartments, planned around comfort, storage, finishes and long-term usability.</td><td>https://www.matrixonline.in/residential</td><td>BreadcrumbList, Service, FAQPage</td></tr><tr><td>/commercial</td><td>Commercial Interiors | Matrix Intertech</td><td>Commercial, corporate, retail, hospitality and institutional interiors delivered with turnkey coordination and handover-focused execution.</td><td>https://www.matrixonline.in/commercial</td><td>BreadcrumbList, Service, FAQPage</td></tr><tr><td>/process</td><td>Process | Matrix Intertech</td><td>Matrix Intertech&#39;s turnkey process from site inspection and concept design through detailing, estimates, execution, finishes and handover.</td><td>https://www.matrixonline.in/process</td><td>BreadcrumbList, FAQPage</td></tr><tr><td>/projects</td><td>Projects | Matrix Intertech</td><td>Explore Matrix Intertech project categories across corporate offices, residential apartments, commercial showrooms and turnkey execution.</td><td>https://www.matrixonline.in/projects</td><td>BreadcrumbList</td></tr><tr><td>/career</td><td>Career | Matrix Intertech</td><td>Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.</td><td>https://www.matrixonline.in/career</td><td>BreadcrumbList, FAQPage</td></tr><tr><td>/clients</td><td>Our Clients | Matrix Intertech</td><td>Explore Matrix Intertech client associations across banking, aviation, media, retail, infrastructure, hospitality and corporate interiors.</td><td>https://www.matrixonline.in/clients</td><td>BreadcrumbList</td></tr><tr><td>/company-factsheet</td><td>Company Factsheet | Matrix Intertech</td><td>Matrix Intertech company factsheet with founding year, Delhi base, turnkey interior capabilities, sectors served and contact details.</td><td>https://www.matrixonline.in/company-factsheet</td><td>BreadcrumbList</td></tr><tr><td>/contact-us</td><td>Contact | Matrix Intertech</td><td>Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.</td><td>https://www.matrixonline.in/contact-us</td><td>BreadcrumbList, FAQPage</td></tr></tbody></table></div>
+<p><strong>Dynamic career detail template:</strong> /career/&lt;ObjectId&gt;; title: &lt;Role&gt; (&lt;Location&gt;) - &lt;ObjectId&gt; | Matrix Intertech Careers. Description: Apply for &lt;Role&gt; at Matrix Intertech in &lt;Location&gt;. &lt;Employment type&gt;. &lt;Summary excerpt&gt; Opening &lt;ObjectId&gt;. Canonical: https://www.matrixonline.in/career/&lt;ObjectId&gt;. BreadcrumbList and, when the record has verified required fields, JobPosting. No real job detail record was available to render.</p>
+<h2>Schemas added</h2><ul><li>Organization and WebSite on home.</li><li>Service on Real Estate, Repair and Maintenance, Residential and Commercial.</li><li>BreadcrumbList on every internal public route, including job detail pages.</li><li>FAQPage only where the same questions and answers are visible.</li><li>JobPosting on individual active opening pages with complete location/country data; never on the job listing or closed/hidden pages.</li></ul>
+<p>Validation here means rendered JSON parsing, required-field checks and source/fixture tests. Google Rich Results Test and production Search Console validation remain deployment steps. A valid schema does not guarantee a search feature or AEO placement.</p>
+<h2>Audited sitemap contents</h2><p>These 13 URLs are present. Open, visible, unexpired career detail URLs are added dynamically when records exist; login, dashboard and API endpoints are excluded.</p><pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/&lt;/loc&gt;
+&lt;changefreq&gt;weekly&lt;/changefreq&gt;
+&lt;priority&gt;1&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/who-we-are&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/about-us&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/real-estate&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/repair-and-maintenance&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/residential&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/commercial&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/process&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/projects&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/career&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/clients&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/company-factsheet&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.7&lt;/priority&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://www.matrixonline.in/contact-us&lt;/loc&gt;
+&lt;changefreq&gt;monthly&lt;/changefreq&gt;
+&lt;priority&gt;0.9&lt;/priority&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;
+</pre>
+<h2>Rendered crawl results</h2><div class="scroll"><table><thead><tr><th>Route</th><th>H1</th><th>Desktop</th><th>Mobile</th><th>Images</th></tr></thead><tbody><tr><td>/</td><td>Turnkey interiors with architectural discipline.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>24</td></tr><tr><td>/who-we-are</td><td>About Matrix Intertech</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>16</td></tr><tr><td>/about-us</td><td>About Matrix Intertech</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>16</td></tr><tr><td>/real-estate</td><td>Real Estate</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>5</td></tr><tr><td>/repair-and-maintenance</td><td>Repair and Maintenance</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>5</td></tr><tr><td>/residential</td><td>Residential</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>5</td></tr><tr><td>/commercial</td><td>Commercial</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>5</td></tr><tr><td>/process</td><td>A precise path from inspection to handover.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>5</td></tr><tr><td>/projects</td><td>Project environments built for daily use and long-term impression.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>19</td></tr><tr><td>/career</td><td>Build refined spaces with a practical project team.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>4</td></tr><tr><td>/clients</td><td>Trusted by leading brands across India.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>15</td></tr><tr><td>/company-factsheet</td><td>Matrix Intertech at a glance.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>4</td></tr><tr><td>/contact-us</td><td>Start with the site, scope and timeline.</td><td>PASS, 1440px</td><td>PASS, 390px</td><td>3</td></tr></tbody></table></div>
+<p>All 40 linked pages and assets returned successful HTTP statuses. There were no external HTTP anchors to scan. All 11 existing portfolio logos are present once on /clients and all 11 clients remain in the authenticated portfolio list. Screenshots are stored in ignored .qa/seo/; detailed machine evidence is seo-audit.json.</p>
+<h2>Protected-route checks</h2><div class="scroll"><table><thead><tr><th>Route</th><th>Unauthenticated status</th><th>X-Robots-Tag</th><th>Redirect</th></tr></thead><tbody><tr><td>/login</td><td>200</td><td>noindex, nofollow</td><td>-</td></tr><tr><td>/dashboard</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/portfolio</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/careers</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/careers/new</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/careers/0123456789abcdef01234567</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/enquiries</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/enquiries/0123456789abcdef01234567</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/applications</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr><tr><td>/dashboard/applications/0123456789abcdef01234567</td><td>307</td><td>noindex, nofollow</td><td>/login</td></tr></tbody></table></div>
+<div class="scroll"><table><thead><tr><th>Authenticated route</th><th>Robots metadata</th><th>H1</th></tr></thead><tbody><tr><td>/dashboard</td><td>noindex, nofollow</td><td>Team dashboard</td></tr><tr><td>/dashboard/portfolio</td><td>noindex, nofollow</td><td>Portfolio Management</td></tr><tr><td>/dashboard/careers</td><td>noindex, nofollow</td><td>Career openings</td></tr><tr><td>/dashboard/careers/new</td><td>noindex, nofollow</td><td>New opening</td></tr><tr><td>/dashboard/enquiries</td><td>noindex, nofollow</td><td>Enquiries</td></tr><tr><td>/dashboard/applications</td><td>noindex, nofollow</td><td>Applications</td></tr></tbody></table></div>
+<h2>Live redirect evidence</h2><div class="scroll"><table><thead><tr><th>Requested URL</th><th>Status</th><th>Location</th></tr></thead><tbody><tr><td>https://beta.simarone.com/</td><td>200</td><td>none</td></tr><tr><td>https://beta.simarone.com/clients</td><td>200</td><td>none</td></tr><tr><td>https://beta.simarone.com/commercial?seo-audit=1</td><td>200</td><td>none</td></tr><tr><td>https://www.matrixonline.in/</td><td>301</td><td>https://matrixonline.in/</td></tr><tr><td>https://www.matrixonline.in/clients</td><td>301</td><td>https://matrixonline.in/clients</td></tr><tr><td>https://www.matrixonline.in/commercial?seo-audit=1</td><td>301</td><td>https://matrixonline.in/commercial/?seo-audit=1</td></tr></tbody></table></div>
+<h2>Remaining deployment and content steps</h2><ol>
+<li>Serve the new build on https://www.matrixonline.in with status 200. Remove the current www-to-non-www redirect first, otherwise adding the opposite rule will create a loop.</li>
+<li>In only the beta HTTP/HTTPS virtual hosts, retain their TLS configuration and set <code>return 301 https://www.matrixonline.in$request_uri;</code>. Preserve each path and query. Redirect non-www and HTTP variants to the corresponding HTTPS www URL. No virtual hosts were changed by this task.</li>
+<li>At cutover, set the serving process APP_URL to https://www.matrixonline.in so the existing CSRF allowlist matches the public host. Preserve session code. Proxy headers: Host and X-Forwarded-Host = $host; X-Forwarded-Proto = trusted public scheme ($scheme when Nginx terminates TLS). Behind Cloudflare use Full (strict) and restrict direct application access.</li>
+<li>Restore the configured MongoDB service before production verification. The sitemap intentionally errors on DB outage rather than silently dropping job URLs. Re-run the crawler against the deployed build and its actual data.</li>
+<li>Review active job locations as City, Country (for example New Delhi, India), plus real title, summary and posting date. Ambiguous or incomplete records omit schema. No records were edited during this audit. Remote-only jobs need verified eligibility information before remote schema can be supported.</li>
+<li>Validate real active-job URLs with Google's Rich Results Test. Confirm closed/hidden records remain noindex/404 and absent from the sitemap. Submit the www sitemap and monitor Search Console after cutover.</li></ol>
+<h2>Files changed</h2><p>This inventory includes source fixes, tests, documentation and audit evidence. Existing logo assets, database records, SMTP settings and authentication implementation were preserved.</p><pre>README.md
+app/about-us/page.tsx
+app/career/[id]/page.tsx
+app/career/page.tsx
+app/clients/page.tsx
+app/commercial/page.tsx
+app/company-factsheet/page.tsx
+app/contact-us/page.tsx
+app/dashboard/layout.tsx
+app/layout.tsx
+app/login/page.tsx
+app/not-found.tsx
+app/page.tsx
+app/process/page.tsx
+app/projects/page.tsx
+app/real-estate/page.tsx
+app/repair-and-maintenance/page.tsx
+app/residential/page.tsx
+app/sitemap.ts
+app/who-we-are/page.tsx
+components/client-logo.tsx
+components/motion.tsx
+components/seo-content.tsx
+components/service-page.tsx
+components/site-header.tsx
+components/site.tsx
+lib/career-seo.ts
+lib/image-dimensions.json
+lib/public-careers.ts
+lib/seo.ts
+lib/site-data.ts
+lib/structured-data.ts
+next.config.ts
+package.json
+reports/seo-audit.html
+reports/seo-audit.json
+reports/seo-live-redirects.json
+reports/seo-summary.json
+reports/sitemap-audited.xml
+scripts/audit-seo.mjs
+scripts/render-seo-report.mjs
+tests/seo.test.mjs</pre>
+<h2>Verification commands</h2><pre>npm run test:seo   # 4 groups passed, including visibility and safe job markup fixtures
+npm run build      # passed
+npm run audit:seo  # 13 routes / 40 linked resources / desktop and mobile / no local failures
+git diff --check   # passed</pre>
+<p class="small">Sources: <a href="https://developers.google.com/search/docs/appearance/structured-data/job-posting">Google JobPosting requirements</a>; <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes">Google site migration guidance</a>; <a href="https://nginx.org/en/docs/http/ngx_http_rewrite_module.html#return">Nginx return directive</a>.</p>
+</main></body></html>

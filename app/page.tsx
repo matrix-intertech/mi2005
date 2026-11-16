@@ -1,8 +1,6 @@
-﻿import type { Metadata } from "next";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/");
 import Link from "next/link";
 import { ArrowRight, Compass, Hammer, Ruler, ShieldCheck } from "lucide-react";
 import { services, processSteps, projects } from "@/lib/site-data";
@@ -18,7 +16,7 @@ const strengths = [
 
 export default function Home() {
   return (
-    <PageShell>
+    <PageShell seoPath="/">
       <section className="relative isolate min-h-[72svh] overflow-hidden sm:min-h-[80vh] bg-charcoal text-white">
         <ParallaxImage src="/images/matrix/hero-studio.webp" alt="Premium architecture and interior design studio" priority className="absolute inset-0 -z-10" imgClassName="opacity-58" strength={28} />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(16,24,32,.96),rgba(16,24,32,.68),rgba(16,24,32,.18))]" />
@@ -61,7 +59,7 @@ export default function Home() {
             {services.map((service, index) => (
               <SectionReveal key={service.slug} delay={index * 0.05} className="h-full">
                 <MotionLinkCard href={service.href} className="group flex h-full flex-col bg-white text-charcoal">
-                  <div className="relative aspect-[16/8.5] overflow-hidden"><ParallaxImage src={service.image} alt="" className="absolute inset-0" strength={8} /></div>
+                  <div className="relative aspect-[16/8.5] overflow-hidden"><ParallaxImage src={service.image} alt={`${service.title} interior design`} className="absolute inset-0" strength={8} /></div>
                   <div className="flex flex-1 flex-col p-7"><h3 className="text-2xl font-semibold">{service.title}</h3><p className="mt-3 text-base leading-7 text-charcoal/66">{service.summary}</p></div>
                 </MotionLinkCard>
               </SectionReveal>
@@ -76,7 +74,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <SectionReveal key={project.title} delay={index * 0.05} className="h-full">
                 <MotionCard className="group flex h-full flex-col overflow-hidden bg-white">
-                  <div className="relative aspect-[16/8.5] overflow-hidden"><ParallaxImage src={project.image} alt="" className="absolute inset-0" strength={10} /></div><div className="flex flex-1 flex-col p-7"><p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">0{index + 1}</p><h3 className="mt-3 text-2xl font-semibold">{project.title}</h3><p className="mt-3 text-base leading-7 text-charcoal/66">{project.text}</p></div>
+                  <div className="relative aspect-[16/8.5] overflow-hidden"><ParallaxImage src={project.image} alt={project.title} className="absolute inset-0" strength={10} /></div><div className="flex flex-1 flex-col p-7"><p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">0{index + 1}</p><h3 className="mt-3 text-2xl font-semibold">{project.title}</h3><p className="mt-3 text-base leading-7 text-charcoal/66">{project.text}</p></div>
                 </MotionCard>
               </SectionReveal>
             ))}

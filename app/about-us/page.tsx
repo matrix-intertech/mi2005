@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
 import { AboutPage } from "@/app/who-we-are/page";
-import { getRouteSeo } from "@/lib/seo";
+import { routeMetadata } from "@/lib/seo";
 
-const seo = getRouteSeo("/about-us");
-export const metadata: Metadata = { title: seo.title, description: seo.description, alternates: { canonical: seo.path } };
+export const metadata = routeMetadata("/about-us");
 
 export default function Page() {
-  return <AboutPage />;
+  return <AboutPage seoPath="/about-us" />;
 }

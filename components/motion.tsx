@@ -1,5 +1,6 @@
-﻿"use client";
+"use client";
 
+import imageDimensions from "@/lib/image-dimensions.json";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
 import type React from "react";
@@ -66,6 +67,9 @@ function ImageLayer({ src, alt = "", imgClassName = "", priority, onError, ...pr
       {...props}
       src={src}
       alt={alt}
+      aria-hidden={alt === "" ? true : undefined}
+      width={props.width ?? imageDimensions[src as keyof typeof imageDimensions]?.width}
+      height={props.height ?? imageDimensions[src as keyof typeof imageDimensions]?.height}
       loading={priority ? "eager" : props.loading || "lazy"}
       fetchPriority={priority ? "high" : props.fetchPriority}
       decoding="async"
