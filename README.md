@@ -189,19 +189,27 @@ POST requires a UUID `submissionId` so retries cannot create duplicate records.
 Run this explicit import once before deploying the database-backed public section:
 
 ```sh
-npm run portfolio:seed
+npm run seed:portfolio
 ```
 
-The import uses `lib/portfolio-seed.json`, preserves the original 11 names, local
-assets, and order, creates the required indexes, and only inserts missing records.
+The import uses `lib/portfolio-seed.json` and the existing local logo assets. New
+records are Public with display orders 1?11 and company-name alt text. It creates
+the required indexes, inserts missing clients and repairs only missing/blank fields.
+An immutable `seedKey` identifies each restored company even after admin edits;
+legacy company names are recognized. Other manually added clients are untouched.
 It does not overwrite admin edits on repeat runs. It never runs during builds or
 page requests. Re-running it after deliberately deleting an imported client will
 restore that missing client; do not schedule it as part of every deployment.
-The static seed is migration input only; the public website reads MongoDB.
+`portfolio:seed` remains an alias. The command uses the currently configured
+`MONGODB_URI` without logging it. The static seed also supplies the public fallback.
 
 Only Public clients are displayed, ordered by display order then company name.
-The entire Previous Clients section is hidden when no public clients exist or the
-database cannot be reached. Updates are read on each public request, including the
+If the collection is empty or MongoDB fails/takes more than three seconds, the
+public section displays the original 11 clients as a temporary fallback. Database
+and fallback lists are never merged. If records exist but all are Hidden, the
+section stays hidden; fallback does not undo deliberate visibility settings.
+The admin list always reads MongoDB and defaults to the Public filter.
+Updates are read on each public request, including the
 home, projects, who-we-are, and clients pages. No rebuild is needed.
 
 Uploads accept PNG, JPEG, WebP and self-contained SVG, up to 2 MB and 16 megapixels.

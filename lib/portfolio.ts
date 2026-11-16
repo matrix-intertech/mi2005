@@ -1,4 +1,5 @@
 import "server-only";
+import seeds from "@/lib/portfolio-seed.json";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/db";
 import type { PortfolioClientView } from "@/lib/portfolio-types";
@@ -28,17 +29,35 @@ export function serializeClient(client: PortfolioClient): PortfolioClientView {
     logoAlt: client.logoAlt, isPublic: client.isPublic, displayOrder: client.displayOrder,
     createdAt: client.createdAt.toISOString(), updatedAt: client.updatedAt.toISOString() };
 }
+function fallbackClients(): PortfolioClientView[] {
+  return seeds.map((client, index) => ({
+    ...client, id: `existing-client-${index + 1}`, logoAlt: client.companyName,
+    isPublic: true, displayOrder: index + 1,
+    createdAt: "1970-01-01T00:00:00.000Z", updatedAt: "1970-01-01T00:00:00.000Z",
+  }));
+}
+async function databasePublicClients() {
+  const collection = await portfolioCollection();
+  const clients = await collection.find({ isPublic: true }).sort({ displayOrder: 1, companyName: 1 }).toArray();
+  // An intentionally hidden portfolio is different from an unseeded collection.
+  if (!clients.length && !(await collection.findOne({}, { projection: { _id: 1 } }))) return fallbackClients();
+  const seen = new Set<string>();
+  return clients.filter(client => {
+    const key = client.companyName.normalize("NFKC").trim().toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).map(serializeClient);
+}
 export async function publicClients() {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
   try {
-    const clients = await (await portfolioCollection()).find({ isPublic: true }).sort({ displayOrder: 1, companyName: 1 }).toArray();
-    const seen = new Set<string>();
-    return clients.filter(client => {
-      const key = client.companyName.normalize("NFKC").trim().toLowerCase();
-      if (seen.has(key)) return false;
-      seen.add(key); return true;
-    }).map(serializeClient);
+    // Do not hold a public page behind the driver's longer connection timeout.
+    return await Promise.race([
+      databasePublicClients(),
+      new Promise<never>((_, reject) => { timeout = setTimeout(() => reject(new Error("Portfolio timeout")), 3000); }),
+    ]);
   } catch {
-    console.error("Portfolio is temporarily unavailable.");
-    return [];
-  }
+    console.error("Portfolio is temporarily unavailable; displaying existing clients.");
+    return fallbackClients();
+  } finally { if (timeout) clearTimeout(timeout); }
 }
