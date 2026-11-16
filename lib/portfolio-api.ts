@@ -1,13 +1,13 @@
 import "server-only";
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/auth";
+import { isAllowedRequestOrigin } from "@/lib/request-origin";
 import { PortfolioError } from "@/lib/portfolio-upload";
 
 export async function authorizePortfolio(request: Request) {
   if (!(await isAdmin())) throw new PortfolioError("Admin sign-in required.", 401);
-  if (request.method !== "GET") {
-    const origin = request.headers.get("origin");
-    if ((origin && origin !== new URL(request.url).origin) || request.headers.get("sec-fetch-site") === "cross-site") throw new PortfolioError("Request origin is not allowed.", 403);
+  if (!isAllowedRequestOrigin(request)) {
+    throw new PortfolioError("Request origin is not allowed. Reload the admin page from the configured site. If this continues, ask the administrator to check APP_URL.", 403);
   }
 }
 export function portfolioError(error: unknown) {

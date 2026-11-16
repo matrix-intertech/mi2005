@@ -247,3 +247,63 @@ the 2 MB file limit. Keep Node.js at the version required in `package.json`.
 
 Implementation references: [Next.js route handlers](https://nextjs.org/docs/app/getting-started/route-handlers)
 and [Sharp image validation limits](https://sharp.pixelplumbing.com/api-constructor/).
+
+
+### Production admin origin validation (Nginx / Cloudflare)
+
+Set the canonical public origin in the VPS runtime environment:
+
+```env
+APP_URL=https://beta.simarone.com
+```
+
+Deploy the updated application and restart PM2 with the updated environment:
+
+```sh
+npm run build
+pm2 restart matrix-intertech-new --update-env
+```
+
+The shared `lib/request-origin.ts` helper compares parsed, exact URL origins.
+`APP_URL` is authoritative: forwarded headers cannot authorize another domain.
+Trailing slashes and default ports are normalized. Unknown origins, opaque/null
+origins, cross-site requests, and mutations without Origin are rejected. Normal
+same-origin GET requests may omit Origin but still require the existing admin
+session. Loopback origins are allowed only with `NODE_ENV=development`, matching
+the local request origin. Production previews must use the configured public origin.
+The frontend uses relative `/api/admin/portfolio` URLs for every operation.
+
+In the **existing beta.simarone.com HTTPS virtual host only**, ensure the app's
+proxy location sends these headers (keep its existing upstream address):
+
+```nginx
+location / {
+    proxy_pass http://127.0.0.1:3000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Real-IP $remote_addr;
+    client_max_body_size 3m;
+    proxy_cache off;
+}
+```
+
+Overwrite forwarded host/protocol with single values; do not forward arbitrary
+client-supplied versions or append comma-separated chains. Preserve the browser's
+Origin header unchanged. Do not rewrite it to APP_URL, as that would bypass CSRF
+validation. Keep the Node port private to the proxy. Keep admin/API responses out
+of CDN caches and preserve `If-Unmodified-Since` for portfolio deletion.
+
+With Cloudflare Full (strict) and HTTPS to Nginx, `$scheme` remains `https`.
+If another trusted TLS terminator uses HTTP to Nginx, preserve its verified HTTPS
+scheme only on that restricted proxy path; never blindly trust incoming forwarded
+headers from the public internet. The explicit APP_URL allows the correct browser
+origin even when the internal request URL is HTTP.
+
+Review with `nginx -t` before reloading the target configuration. No deployed
+Nginx files or unrelated virtual hosts are changed by this repository update.
+Run `npm run test:origin` for origin/CSRF regression tests.
+
+References: [Nginx proxy headers](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_set_header)
+and [Cloudflare X-Forwarded-Proto](https://developers.cloudflare.com/fundamentals/reference/http-headers/#x-forwarded-proto).

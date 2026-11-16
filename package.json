@@ -11,6 +11,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test:origin": "node --test tests/request-origin.test.mjs",
     "seed:portfolio": "node scripts/seed-portfolio.mjs",
     "portfolio:seed": "node scripts/seed-portfolio.mjs",
     "db:generate": "drizzle-kit generate"
