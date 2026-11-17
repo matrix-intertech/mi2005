@@ -53,10 +53,11 @@ async function databasePublicClients() {
 async function loadPublicClients() {
   let timeout: ReturnType<typeof setTimeout> | undefined;
   try {
-    // Do not hold a public page behind the driver's longer connection timeout.
+    // Cache hits and ISR serve immediately. Bound a cache miss after invalidation
+    // so an unavailable database cannot hold the public response for seconds.
     return await Promise.race([
       databasePublicClients(),
-      new Promise<never>((_, reject) => { timeout = setTimeout(() => reject(new Error("Portfolio timeout")), 3000); }),
+      new Promise<never>((_, reject) => { timeout = setTimeout(() => reject(new Error("Portfolio timeout")), 250); }),
     ]);
   } catch {
     console.error("Portfolio is temporarily unavailable; displaying existing clients.");

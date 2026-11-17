@@ -18,7 +18,8 @@ import crypto from 'node:crypto';
     {key:'tablet',ratio:1.25,position:.5,widths:[768,960]},
    ]) for(const width of group.widths){
     const cropWidth=Math.round(meta.height*group.ratio);const left=Math.round((meta.width-cropWidth)*group.position);
-    const buffer=await sharp(input).extract({left,top:0,width:cropWidth,height:meta.height}).resize({width}).toFormat(format,{quality:format==='avif'?65:82,effort:format==='avif'?6:5}).toBuffer();
+    const mobileAvif = group.key === "mobile" && format === "avif";
+    const buffer=await sharp(input).extract({left,top:0,width:cropWidth,height:meta.height}).resize({width}).toFormat(format,{quality:mobileAvif?55:format==='avif'?65:82,effort:mobileAvif?7:format==='avif'?6:5}).toBuffer();
     const hash=crypto.createHash('sha256').update(buffer).digest('hex').slice(0,12);const file=`${name}-${group.key.toLowerCase()}-${width}-${hash}.${format}`;
     await fs.writeFile(path.join(dir,file),buffer);record[group.key].push({width,format,src:`/images/matrix/optimized/${file}`,bytes:buffer.length});
    }

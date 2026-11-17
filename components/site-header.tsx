@@ -32,7 +32,7 @@ function HeaderContent() {
   return (
     <div className="site-header-layout mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
       <Link prefetch={false} href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
-        <img width={1302} height={385} src="/images/matrix/logo.png" srcSet={headerLogo.map(v => `${v.src} ${v.width}w`).join(", ")} sizes="(max-width: 639px) 135px, 136px" decoding="async" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
+        <img fetchPriority="low" width={1302} height={385} src="/images/matrix/logo.png" srcSet={headerLogo.map(v => `${v.src} ${v.width}w`).join(", ")} sizes="(max-width: 639px) 135px, 136px" decoding="async" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
       </Link>
       <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
         {navItems.slice(0, 1).map((item) => <Link prefetch={false} key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze-link">{item.label}</Link>)}

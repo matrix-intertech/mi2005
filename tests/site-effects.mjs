@@ -31,6 +31,7 @@ try {
         h1: document.querySelectorAll("h1").length,
       };
     });
+    assert.equal(await page.locator("[data-reveal-state]").count(), 0, "Reveal scanning waits for interaction");
     assert.equal(metrics.overflow, false, `${width}: overflow`);
     assert.equal(metrics.clipped, false, `${width}: hero clipping`);
     assert.equal(metrics.loaded, true, `${width}: hero image`);
@@ -55,7 +56,14 @@ try {
       const layer = page.locator("[data-parallax]").first();
       const before = await layer.getAttribute("style");
       await page.evaluate(() => scrollTo(0, 0)); await page.waitForTimeout(100);
-      assert.notEqual(await layer.getAttribute("style"), before, "Parallax did not respond to scroll");
+      assert.equal(await layer.getAttribute("style"), before, "Mobile parallax must stay inactive");
+    }
+    if (width >= 1024) {
+      const layer = page.locator("[data-parallax]").first();
+      assert.equal(await layer.getAttribute("style"), null, "No parallax work before scrolling");
+      await page.evaluate(() => scrollTo(0, 250));
+      await page.waitForFunction(() => document.querySelector("[data-parallax]").style.getPropertyValue("--parallax-y"));
+      assert.ok(await layer.getAttribute("style"), "Desktop parallax responds to scroll");
     }
     console.log(`PASS normal-motion WebKit ${width}`);
   }
@@ -100,7 +108,13 @@ try {
   }
 
   const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
-  const plain = await noJS.newPage(); await plain.goto(base); await plain.waitForTimeout(1500);
+  const plain = await noJS.newPage(); await plain.goto(base, { waitUntil: "domcontentloaded" });
+  const visible = await plain.locator(".home-hero-content > div").evaluateAll(elements => elements.every(el => {
+    const css = getComputedStyle(el);
+    return css.opacity === "1" && css.visibility === "visible" && css.animationName === "none" && css.transform === "none";
+  }));
+  assert.equal(visible, true, "Every hero text/button wrapper is visible immediately, without JS or animations");
+  assert.equal(await plain.locator(".home-hero + section [data-reveal]").count(), 0, "Stats must not wait for reveal observers");
   assert.ok(await plain.locator("h1").isVisible());
   assert.equal(await plain.locator(".home-hero img").evaluate(el => el.complete && el.naturalWidth > 0), true);
   console.log("PASS server-rendered hero without JavaScript");

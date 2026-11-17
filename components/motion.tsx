@@ -1,3 +1,4 @@
+import { preload } from "react-dom";
 import imageDimensions from "@/lib/image-dimensions.json";
 import responsiveImages from "@/lib/responsive-images.json";
 import type React from "react";
@@ -9,12 +10,6 @@ type RevealProps = { children: React.ReactNode; className?: string; delay?: numb
 
 export function SectionReveal({ children, className = "", delay = 0 }: RevealProps) {
   return <div className={className} data-reveal style={{ "--reveal-delay": `${delay}s` } as React.CSSProperties}>{children}</div>;
-}
-export function StaggerReveal({ children, className = "" }: RevealProps) {
-  return <div className={`${className} stagger-reveal`}>{children}</div>;
-}
-export function StaggerItem({ children, className = "" }: RevealProps) {
-  return <div className={className}>{children}</div>;
 }
 export function MotionCard({ className = "", ...props }: React.HTMLAttributes<HTMLElement>) {
   return <article {...props} className={`motion-card ${className}`} />;
@@ -30,13 +25,20 @@ export function ParallaxImage({ className = "", imgClassName = "", strength = 44
   const aspect = dimensions ? dimensions.width / dimensions.height : 2;
   const imageSizes = sizes || (priority ? (hero ? "max(112vw, 210vh)" : `(max-width: 639px) max(112vw, ${Math.ceil(63 * aspect)}svh, ${Math.ceil(600 * aspect)}px), max(112vw, ${Math.ceil(70 * aspect)}vh)`) : "(max-width: 639px) 100vw, (max-width: 1023px) 75vw, 50vw");
   const srcSet = (format: string, group: "variants" | "mobile" | "mobileWide" | "tablet" = "variants") => variants?.[group]?.filter(v => v.format === format).map(v => `${v.src} ${v.width}w`).join(", ");
+  if (hero && priority && variants) {
+    // Emit responsive hints into the initial head; only one media range matches.
+    for (const hint of [
+      { group: "mobile", media: "(max-width: 480px)", sizes: "100vw" },
+      { group: "mobileWide", media: "(480px < width < 640px)", sizes: "960px" },
+      { group: "tablet", media: "(640px <= width < 1024px) and (orientation: portrait)", sizes: "960px" },
+      { group: "variants", media: "(width >= 1024px), (width >= 640px) and (orientation: landscape)", sizes: imageSizes },
+    ] as const) {
+      const first = variants[hint.group]?.find(v => v.format === "avif");
+      if (first) preload(first.src, { as: "image", type: "image/avif", media: hint.media,
+        imageSrcSet: srcSet("avif", hint.group), imageSizes: hint.sizes, fetchPriority: "high" });
+    }
+  }
   return <>
-    {hero && priority && <>
-      <link rel="preload" as="image" type="image/avif" media="(max-width: 480px)" imageSrcSet={srcSet("avif", "mobile")} imageSizes="100vw" fetchPriority="high" />
-      <link rel="preload" as="image" type="image/avif" media="(480px < width < 640px)" imageSrcSet={srcSet("avif", "mobileWide")} imageSizes="960px" fetchPriority="high" />
-      <link rel="preload" as="image" type="image/avif" media="(640px <= width < 1024px) and (orientation: portrait)" imageSrcSet={srcSet("avif", "tablet")} imageSizes="960px" fetchPriority="high" />
-      <link rel="preload" as="image" type="image/avif" media="(width >= 1024px), (width >= 640px) and (orientation: landscape)" imageSrcSet={srcSet("avif")} imageSizes={imageSizes} fetchPriority="high" />
-    </>}
     <div className={`overflow-hidden bg-charcoal ${className.includes("absolute") ? className : `relative ${className}`}`} data-parallax={strength}>
     <div className="parallax-layer absolute inset-0">
       <picture>

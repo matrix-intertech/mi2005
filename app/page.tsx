@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Compass, Hammer, Ruler, ShieldCheck } from "lucide-react";
 import { services, processSteps, projects } from "@/lib/site-data";
 import { EnquiryCTA, PageShell, PreviousClients, SectionHeader, TrustStrip } from "@/components/site";
-import { MotionCard, MotionLinkCard, ParallaxImage, SectionReveal, StaggerItem, StaggerReveal } from "@/components/motion";
+import { MotionCard, MotionLinkCard, ParallaxImage, SectionReveal } from "@/components/motion";
 
 const strengths = [
   { icon: ShieldCheck, title: "Accountable delivery", text: "One team coordinates design, site execution, vendors and handover." },
@@ -21,16 +21,16 @@ export default function Home() {
         <ParallaxImage src="/images/matrix/hero-studio.webp" alt="Premium architecture and interior design studio" priority className="absolute inset-0 -z-10" imgClassName="home-hero-image opacity-58" strength={28} />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(16,24,32,.96),rgba(16,24,32,.68),rgba(16,24,32,.18))]" />
         <div className="home-hero-layout mx-auto flex min-h-[72svh] max-w-[92rem] sm:min-h-[80vh] items-end px-5 pb-16 pt-24 sm:px-6">
-          <StaggerReveal className="home-hero-content max-w-5xl sm:-translate-y-10 lg:-translate-y-14">
-            <StaggerItem><p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Matrix Intertech Pvt. Ltd.</p></StaggerItem>
-            <StaggerItem><h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-[1.03] sm:text-6xl lg:text-7xl">Turnkey interiors with architectural discipline.</h1></StaggerItem>
-            <StaggerItem><p className="mt-5 max-w-3xl text-xl font-semibold leading-8 text-gold sm:text-2xl">Shaping The Ideas, Building The Reality</p></StaggerItem>
-            <StaggerItem><p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">Founded in Delhi in 2005, Matrix Intertech creates turnkey interiors for corporate, commercial and residential spaces, from design to handover.</p></StaggerItem>
-            <StaggerItem className="home-hero-actions mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="home-hero-content max-w-5xl sm:-translate-y-10 lg:-translate-y-14">
+            <div><p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Matrix Intertech Pvt. Ltd.</p></div>
+            <div><h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-[1.03] sm:text-6xl lg:text-7xl">Turnkey interiors with architectural discipline.</h1></div>
+            <div><p className="mt-5 max-w-3xl text-xl font-semibold leading-8 text-gold sm:text-2xl">Shaping The Ideas, Building The Reality</p></div>
+            <div><p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">Founded in Delhi in 2005, Matrix Intertech creates turnkey interiors for corporate, commercial and residential spaces, from design to handover.</p></div>
+            <div className="home-hero-actions mt-8 flex flex-col gap-3 sm:flex-row">
               <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a project <ArrowRight className="h-4 w-4" /></Link>
               <Link prefetch={false} href="/projects/" className="inline-flex items-center justify-center rounded-sm border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">View project types</Link>
-            </StaggerItem>
-          </StaggerReveal>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -4,15 +4,15 @@ import fs from "node:fs";
 import ts from "typescript";
 import { ObjectId } from "mongodb";
 
-function load(file, mocks) {
+function load(file, mocks, timers = globalThis) {
   const exports = {};
   const code = ts.transpileModule(fs.readFileSync(file, "utf8"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
   }).outputText;
-  new Function("exports", "require", code)(exports, name => {
+  new Function("exports", "require", "setTimeout", "clearTimeout", code)(exports, name => {
     assert.ok(name in mocks, `Unexpected dependency: ${name}`);
     return mocks[name];
-  });
+  }, timers.setTimeout, timers.clearTimeout);
   return exports;
 }
 
@@ -107,4 +107,25 @@ test("unauthorized portfolio mutations cannot write or invalidate the public cac
   assert.equal((await h.item.PATCH(new Request("http://localhost", { method: "PATCH" }), context)).status, 401);
   assert.equal((await h.item.DELETE(new Request("http://localhost", { method: "DELETE" }), context)).status, 401);
   assert.deepEqual(h.events, []);
+});
+
+
+test("an unavailable public portfolio returns the cached fallback within the short miss budget", async () => {
+  let cached, reads = 0;
+  const client = { companyName: "Existing public client", logoUrl: "/existing.webp" };
+  const portfolio = load("lib/portfolio.ts", {
+    "server-only": {},
+    "next/cache": { unstable_cache: fn => async () => cached ??= await fn() },
+    "@/lib/public-portfolio-cache": { PUBLIC_PORTFOLIO_TAG: "public-portfolio" },
+    "@/lib/portfolio-seed.json": { default: [client] },
+    "@/lib/db": { getDb: () => { reads++; return new Promise(() => {}); } },
+  }, {
+    setTimeout: (callback, ms) => { assert.equal(ms, 250); return setTimeout(callback, 0); },
+    clearTimeout,
+  });
+  const result = await portfolio.publicClients();
+  assert.equal(result[0].companyName, client.companyName);
+  assert.equal(result[0].isPublic, true);
+  assert.deepEqual(await portfolio.publicClients(), result);
+  assert.equal(reads, 1, "cached fallback must not retry MongoDB on each request");
 });

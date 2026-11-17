@@ -77,7 +77,7 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
 }
 
 export function TrustStrip() {
-  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-x-5 gap-y-6 px-5 py-7 sm:px-6 sm:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} className="min-w-0 break-words" delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/62">{item.label}</div></div></SectionReveal>)}</div></section>;
+  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-x-5 gap-y-6 px-5 py-7 sm:px-6 sm:grid-cols-4">{trustItems.map((item) => <div key={item.value} className="min-w-0 break-words"><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/62">{item.label}</div></div></div>)}</div></section>;
 }
 
 
