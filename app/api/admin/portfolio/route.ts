@@ -1,3 +1,4 @@
+import { invalidatePublicPortfolio } from "@/lib/public-portfolio-cache";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import { portfolioCollection, serializeClient, type PortfolioClient } from "@/lib/portfolio";
@@ -30,6 +31,7 @@ export async function POST(request: Request) {
     const now = new Date();
     const client = { ...fields, _id: new ObjectId(), logoUrl: uploaded, submissionId, createdAt: now, updatedAt: now } as PortfolioClient;
     await collection.insertOne(client);
+    invalidatePublicPortfolio();
     return NextResponse.json({ client: serializeClient(client) }, { status: 201 });
   } catch (error) {
     if (uploaded) await removeUnusedLogo(uploaded);

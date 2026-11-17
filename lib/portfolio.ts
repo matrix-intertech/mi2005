@@ -1,4 +1,6 @@
 import "server-only";
+import { unstable_cache } from "next/cache";
+import { PUBLIC_PORTFOLIO_TAG } from "@/lib/public-portfolio-cache";
 import seeds from "@/lib/portfolio-seed.json";
 import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/db";
@@ -48,7 +50,7 @@ async function databasePublicClients() {
     seen.add(key); return true;
   }).map(serializeClient);
 }
-export async function publicClients() {
+async function loadPublicClients() {
   let timeout: ReturnType<typeof setTimeout> | undefined;
   try {
     // Do not hold a public page behind the driver's longer connection timeout.
@@ -61,3 +63,8 @@ export async function publicClients() {
     return fallbackClients();
   } finally { if (timeout) clearTimeout(timeout); }
 }
+
+// Only the anonymous, explicitly public view is cached. Dashboard reads bypass this.
+export const publicClients = unstable_cache(loadPublicClients, ["public-portfolio-v1"], {
+  tags: [PUBLIC_PORTFOLIO_TAG], revalidate: 300,
+});

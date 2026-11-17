@@ -25,10 +25,10 @@ export default function Home() {
             <StaggerItem><p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Matrix Intertech Pvt. Ltd.</p></StaggerItem>
             <StaggerItem><h1 className="mt-5 max-w-5xl text-5xl font-semibold leading-[1.03] sm:text-6xl lg:text-7xl">Turnkey interiors with architectural discipline.</h1></StaggerItem>
             <StaggerItem><p className="mt-5 max-w-3xl text-xl font-semibold leading-8 text-gold sm:text-2xl">Shaping The Ideas, Building The Reality</p></StaggerItem>
-            <StaggerItem><p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">Founded in 2005, Matrix Intertech creates corporate, commercial and residential spaces from concept through execution and handover.</p></StaggerItem>
+            <StaggerItem><p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">Founded in Delhi in 2005, Matrix Intertech creates turnkey interiors for corporate, commercial and residential spaces, from design to handover.</p></StaggerItem>
             <StaggerItem className="home-hero-actions mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact-us/" className="inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a project <ArrowRight className="h-4 w-4" /></Link>
-              <Link href="/projects/" className="inline-flex items-center justify-center rounded-sm border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">View project types</Link>
+              <Link prefetch={false} href="/contact-us/" className="inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a project <ArrowRight className="h-4 w-4" /></Link>
+              <Link prefetch={false} href="/projects/" className="inline-flex items-center justify-center rounded-sm border border-white/35 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">View project types</Link>
             </StaggerItem>
           </StaggerReveal>
         </div>
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
       <section className="bg-charcoal px-5 py-16 text-white sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[92rem]">
-          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeader eyebrow="Services" title="Interior, architecture and fitout expertise for real spaces." inverse /><Link href="/contact-us/" className="inline-flex items-center gap-2 text-sm font-semibold text-gold">Plan your scope <ArrowRight className="h-4 w-4" /></Link></div>
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end"><SectionHeader eyebrow="Services" title="Interior, architecture and fitout expertise for real spaces." inverse /><Link prefetch={false} href="/contact-us/" className="inline-flex items-center gap-2 text-sm font-semibold text-gold">Plan your scope <ArrowRight className="h-4 w-4" /></Link></div>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {services.map((service, index) => (
               <SectionReveal key={service.slug} delay={index * 0.05} className="h-full">

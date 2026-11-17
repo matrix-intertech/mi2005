@@ -1,12 +1,12 @@
 import type { RoutePath } from "@/lib/seo";
 import { SeoContent } from "@/components/seo-content";
-import { connection } from "next/server";
 import { publicClients } from "@/lib/portfolio";
 import { ClientLogo } from "@/components/client-logo";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Mail, Phone } from "lucide-react";
 import { aboutItems, contact, navItems, services, trustItems } from "@/lib/site-data";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
+import { SiteEffects } from "@/components/site-effects";
 import { SiteHeader } from "@/components/site-header";
 
 const isoCertificatePath = "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf";
@@ -15,11 +15,12 @@ export function PageShell({ children, seoPath }: { children: React.ReactNode; se
   return (
     <div className="min-h-screen bg-warm text-charcoal">
       <SiteHeader />
+      <SiteEffects />
       <main>{children}{seoPath && <SeoContent path={seoPath} />}</main>
       <footer className="site-footer bg-charcoal text-white">
         <div className="mx-auto grid max-w-[92rem] gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1.25fr_.6fr_.6fr_.6fr]">
           <div>
-            <img width={450} height={135} src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" className="h-14 w-auto max-w-[240px] object-contain" />
+            <img width={450} height={135} src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" loading="lazy" decoding="async" className="h-14 w-auto max-w-[240px] object-contain" />
             <p className="mt-4 max-w-xl text-base leading-7 text-white/70">Interior, architecture and turnkey implementation for corporate, residential and commercial projects.</p>
             <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="mt-5 inline-flex max-w-sm items-center gap-3 rounded-sm border border-white/12 bg-white/6 px-4 py-3 text-left transition hover:border-gold/60 hover:bg-white/10" aria-label="View ISO 9001 certificate PDF">
               <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-gold text-charcoal"><BadgeCheck className="h-5 w-5" aria-hidden="true" /></span>
@@ -44,7 +45,7 @@ export function PageShell({ children, seoPath }: { children: React.ReactNode; se
 }
 
 function FooterColumn({ title, items }: { title: string; items: { href: string; label: string }[] }) {
-  return <div><h3 className="text-base font-semibold text-gold">{title}</h3><div className="mt-4 grid gap-2">{items.map((item) => <Link key={item.href} href={item.href} className="text-base text-white/70 hover:text-white">{item.label}</Link>)}</div></div>;
+  return <div><h3 className="text-base font-semibold text-gold">{title}</h3><div className="mt-4 grid gap-2">{items.map((item) => <Link prefetch={false} key={item.href} href={item.href} className="text-base text-white/70 hover:text-white">{item.label}</Link>)}</div></div>;
 }
 
 export function SectionHeader({ eyebrow, title, text, inverse = false }: { eyebrow: string; title: string; text?: string; inverse?: boolean }) {
@@ -80,8 +81,7 @@ export function TrustStrip() {
 }
 
 
-export async function PreviousClients() {
-  await connection();
+export async function PreviousClients({ title = "Trusted by leading brands across India." }: { title?: string } = {}) {
   const clients = await publicClients();
   if (!clients.length) return null;
   return (
@@ -89,7 +89,7 @@ export async function PreviousClients() {
       <div className="mx-auto max-w-[92rem]">
         <SectionReveal className="mx-auto max-w-4xl text-center">
           <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">Previous clients</p>
-          <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] text-charcoal sm:text-5xl">Trusted by leading brands across India.</h2>
+          <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] text-charcoal sm:text-5xl">{title}</h2>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-charcoal/68 sm:text-lg sm:leading-8">
             Matrix Intertech has delivered interior, fit-out and project execution work for clients across aviation, banking, media, retail, hospitality, technology and infrastructure.
           </p>
@@ -119,7 +119,7 @@ export function EnquiryCTA({ image = "/images/matrix/contact.webp" }: { image?: 
           <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-gold">Project enquiry</p>
           <h2 className="mt-4 text-4xl font-semibold leading-[1.1] sm:text-5xl">Bring us the site, scope and timeline.</h2>
           <p className="mt-4 text-base leading-7 text-white/72">Matrix can help shape a clear path from first inspection to handover across interiors, architecture and turnkey fitout work.</p>
-          <Link href="/contact-us/" className="mt-8 inline-flex items-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a conversation <ArrowRight className="h-4 w-4" /></Link>
+          <Link prefetch={false} href="/contact-us/" className="mt-8 inline-flex items-center gap-2 rounded-sm bg-gold px-5 py-3 text-sm font-semibold text-charcoal transition hover:bg-white">Start a conversation <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </SectionReveal>
     </section>

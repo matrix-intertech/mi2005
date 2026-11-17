@@ -32,7 +32,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <PreviousClients />
+      <PreviousClients title="Client associations across industries." />
       <section className="bg-white px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[92rem]">
           <Link href="/contact-us/" className="inline-flex items-center gap-2 rounded-sm bg-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-bronze">Discuss a project <ArrowRight className="h-4 w-4" /></Link>

@@ -1,3 +1,4 @@
+import { invalidatePublicPortfolio } from "@/lib/public-portfolio-cache";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import { portfolioCollection, serializeClient } from "@/lib/portfolio";
@@ -28,6 +29,7 @@ export async function PATCH(request: Request, context: Context) {
     if (logo instanceof File && logo.size) uploaded = await saveLogo(logo);
     const updated = await collection.findOneAndUpdate({ _id: id, updatedAt: current.updatedAt }, { $set: { ...fields, ...(uploaded ? { logoUrl: uploaded } : {}), updatedAt: new Date(Math.max(Date.now(), current.updatedAt.getTime() + 1)) } }, { returnDocument: "after" });
     if (!updated) throw new PortfolioError("This client has changed. Refresh the list before editing again.", 409);
+    invalidatePublicPortfolio();
     if (uploaded) await removeUnusedLogo(current.logoUrl);
     return NextResponse.json({ client: serializeClient(updated) });
   } catch (error) {
@@ -43,6 +45,7 @@ export async function DELETE(request: Request, context: Context) {
     if (!version || Number.isNaN(Date.parse(version))) throw new PortfolioError("The current client version is required.");
     const deleted = await (await portfolioCollection()).findOneAndDelete({ _id: id, updatedAt: new Date(version) });
     if (!deleted) throw new PortfolioError("Client was changed or removed. Refresh the list before deleting.", 409);
+    invalidatePublicPortfolio();
     await removeUnusedLogo(deleted.logoUrl);
     return NextResponse.json({ ok: true });
   } catch (error) { return portfolioError(error); }

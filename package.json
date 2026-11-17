@@ -16,7 +16,12 @@
     "portfolio:seed": "node scripts/seed-portfolio.mjs",
     "db:generate": "drizzle-kit generate",
     "test:seo": "node --test tests/seo.test.mjs",
-    "audit:seo": "node scripts/audit-seo.mjs"
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "analyze": "node scripts/analyze-bundle.mjs",
+    "images:generate": "node scripts/generate-responsive-images.mjs",
+    "test:responsive": "node tests/mobile-responsive.mjs",
+    "test:performance": "node --test tests/public-portfolio-cache.test.mjs tests/responsive-image-assets.test.mjs",
+    "test:effects": "node tests/site-effects.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -54,6 +59,7 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
     "@cloudflare/workers-types": "4.20260515.1",
+    "@next/bundle-analyzer": "16.2.6",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",

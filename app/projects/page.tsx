@@ -8,7 +8,7 @@ import { projects } from "@/lib/site-data";
 export default function Page() {
   return (
     <PageShell seoPath="/projects">
-      <PageHero eyebrow="Projects" title="Project environments built for daily use and long-term impression." text="The portfolio structure is preserved as project categories, ready for detailed case studies as photography and client approvals become available." image="/images/matrix/projects-office.webp" />
+      <PageHero eyebrow="Projects" title="Project environments built for daily use and long-term impression." text="Explore corporate, commercial and residential interior project categories and the scope of Matrix Intertech turnkey interior execution. Detailed case studies depend on available photography and client approvals." image="/images/matrix/projects-office.webp" />
       <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-[92rem]">
           <SectionHeader eyebrow="Project types" title="Corporate, commercial, residential and execution-led environments." />

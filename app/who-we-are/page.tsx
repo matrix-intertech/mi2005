@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Building2, CheckCircle2, Clock3, Compass, Download, ExternalLink, FileText, Handshake, Layers3, MapPinned, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Building2, CheckCircle2, Clock3, Compass, Download, ExternalLink, FileText, Handshake, Layers3, ShieldCheck, Sparkles } from "lucide-react";
 import { EnquiryCTA, PageHero, PageShell, PreviousClients, SectionHeader, TrustStrip } from "@/components/site";
 import { ParallaxImage, SectionReveal } from "@/components/motion";
 import { contact, projects, services } from "@/lib/site-data";
@@ -68,7 +68,7 @@ export function AboutPage({ seoPath = "/who-we-are" }: { seoPath?: "/who-we-are"
     <PageShell seoPath={seoPath}>
       <PageHero
         eyebrow="Who we are"
-        title="About Matrix Intertech"
+        title={seoPath === "/about-us" ? "Matrix Intertech Private Limited" : "About Matrix Intertech"}
         text="A Delhi-based interior and architectural services company delivering turnkey spaces from concept to complete implementation under one roof."
         image="/images/matrix/hero-studio.webp"
       />

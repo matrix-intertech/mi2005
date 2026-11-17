@@ -1,28 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import headerLogo from "@/lib/header-logo.json";
 import { BadgeCheck, ChevronDown, Menu } from "lucide-react";
-import { motion, useReducedMotion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useMounted } from "@/components/motion";
 import { aboutItems, navItems } from "@/lib/site-data";
 
 const isoCertificatePath = "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf";
 
 export function SiteHeader() {
-  const { scrollY } = useScroll();
-  const mounted = useMounted();
   const [scrolled, setScrolled] = useState(false);
-  const reduceMotion = useReducedMotion();
 
-  useEffect(() => scrollY.on("change", (latest) => setScrolled(latest > 16)), [scrollY]);
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 16);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
 
-  const headerClass = "sticky top-0 z-50 border-b bg-warm/90 backdrop-blur-xl";
-  const headerStyle = mounted && scrolled ? { borderColor: "rgba(16,24,32,.14)", boxShadow: "0 18px 45px rgba(16,24,32,.10)" } : { borderColor: "rgba(16,24,32,.08)", boxShadow: "0 0 0 rgba(16,24,32,0)" };
+  const headerClass = "sticky top-0 z-50 border-b bg-warm/90 backdrop-blur-xl transition-[box-shadow,border-color] duration-300 motion-reduce:transition-none";
+  const headerStyle = scrolled ? { borderColor: "rgba(16,24,32,.14)", boxShadow: "0 18px 45px rgba(16,24,32,.10)" } : { borderColor: "rgba(16,24,32,.08)", boxShadow: "0 0 0 rgba(16,24,32,0)" };
   const content = <HeaderContent />;
 
-  if (!mounted || reduceMotion) return <header className={headerClass} style={headerStyle}>{content}</header>;
-  return <motion.header className={headerClass} animate={headerStyle} transition={{ duration: 0.28 }}>{content}</motion.header>;
+  return <header className={headerClass} style={headerStyle}>{content}</header>;
 }
 
 function HeaderContent() {
@@ -31,11 +31,11 @@ function HeaderContent() {
 
   return (
     <div className="site-header-layout mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
-      <Link href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
-        <img width={1302} height={385} src="/images/matrix/logo.png" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
+      <Link prefetch={false} href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
+        <img width={1302} height={385} src="/images/matrix/logo.png" srcSet={headerLogo.map(v => `${v.src} ${v.width}w`).join(", ")} sizes="(max-width: 639px) 135px, 136px" decoding="async" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
       </Link>
       <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
-        {navItems.slice(0, 1).map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}
+        {navItems.slice(0, 1).map((item) => <Link prefetch={false} key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}
         <div className="group relative" onMouseEnter={() => setAboutOpen(true)} onMouseLeave={() => setAboutOpen(false)}>
           <button
             type="button"
@@ -49,38 +49,38 @@ function HeaderContent() {
           <div className={`absolute left-0 top-full w-56 pt-4 ${aboutOpen ? "block" : "hidden group-hover:block group-focus-within:block"}`} role="menu">
             <div className="grid gap-1 rounded-sm border border-charcoal/10 bg-warm p-3 shadow-2xl">
               {aboutItems.map((item) => (
-                <Link key={item.href} href={item.href} className="rounded-sm px-3 py-2 text-sm font-medium text-charcoal/75 hover:bg-white hover:text-bronze focus:bg-white focus:outline-none" role="menuitem">
+                <Link prefetch={false} key={item.href} href={item.href} className="rounded-sm px-3 py-2 text-sm font-medium text-charcoal/75 hover:bg-white hover:text-bronze focus:bg-white focus:outline-none" role="menuitem">
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        {navItems.slice(1).map((item) => <Link key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}
+        {navItems.slice(1).map((item) => <Link prefetch={false} key={item.href} href={item.href} className="text-sm font-semibold text-charcoal/75 transition hover:text-bronze">{item.label}</Link>)}
       </nav>
       <div className="hidden items-center gap-3 sm:flex">
         <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-sm border border-bronze/30 bg-white/65 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-charcoal/78 transition hover:border-bronze hover:text-bronze xl:inline-flex" aria-label="View ISO 9001 certificate PDF">
           <BadgeCheck className="h-4 w-4 text-bronze" aria-hidden="true" />
           ISO Certified
         </a>
-        <Link href="/contact-us" className="hidden rounded-sm bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bronze sm:inline-flex">Start enquiry</Link>
+        <Link prefetch={false} href="/contact-us" className="hidden rounded-sm bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bronze sm:inline-flex">Start enquiry</Link>
       </div>
       <details className="mobile-menu relative lg:hidden" open={mobileOpen} onToggle={(event) => setMobileOpen(event.currentTarget.open)}>
         <summary className="flex min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 justify-center cursor-pointer list-none items-center rounded-sm border border-charcoal/15 p-2 focus:outline-none focus:ring-4 focus:ring-bronze/20" aria-controls="mobile-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
           <Menu className="h-5 w-5" aria-hidden="true" />
         </summary>
         <nav id="mobile-navigation" className="absolute right-0 mt-3 grid w-72 gap-1 rounded-sm border border-charcoal/10 bg-warm p-3 shadow-2xl" aria-label="Mobile navigation">
-          <Link href="/contact-us" onClick={() => setMobileOpen(false)} className="rounded-sm bg-charcoal px-3 py-3 text-sm font-semibold text-white sm:hidden">Start enquiry</Link>
-          {navItems.slice(0, 1).map((item) => <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm font-medium hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
+          <Link prefetch={false} href="/contact-us" onClick={() => setMobileOpen(false)} className="rounded-sm bg-charcoal px-3 py-3 text-sm font-semibold text-white sm:hidden">Start enquiry</Link>
+          {navItems.slice(0, 1).map((item) => <Link prefetch={false} key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm font-medium hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
           <details className="rounded-sm px-3 py-2" open={aboutOpen} onToggle={(event) => setAboutOpen(event.currentTarget.open)}>
             <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-medium" aria-expanded={aboutOpen} aria-label="About Us links">
               About Us <ChevronDown className="h-4 w-4" aria-hidden="true" />
             </summary>
             <div className="mt-2 grid gap-1 border-l border-charcoal/10 pl-3">
-              {aboutItems.map((item) => <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm text-charcoal/70 hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
+              {aboutItems.map((item) => <Link prefetch={false} key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm text-charcoal/70 hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
             </div>
           </details>
-          {navItems.slice(1).map((item) => <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm font-medium hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
+          {navItems.slice(1).map((item) => <Link prefetch={false} key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm font-medium hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
         </nav>
       </details>
     </div>

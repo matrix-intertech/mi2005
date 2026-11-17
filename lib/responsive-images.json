@@ -1,0 +1,491 @@
+{
+  "/images/matrix/hero-studio.webp": {
+    "width": 1800,
+    "height": 771,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-480-534758ff6fd3.avif",
+        "bytes": 12800
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-768-f5ab85549b22.avif",
+        "bytes": 27838
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-1024-9f218e9539a7.avif",
+        "bytes": 44712
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-1440-e23bab634146.avif",
+        "bytes": 72161
+      },
+      {
+        "width": 1800,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-1800-56826895cb5b.avif",
+        "bytes": 109378
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-480-09678165422b.webp",
+        "bytes": 16160
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-768-c3c5dd90254c.webp",
+        "bytes": 35162
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-1024-463cff521874.webp",
+        "bytes": 56504
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-1440-c8c39d961fd2.webp",
+        "bytes": 89342
+      },
+      {
+        "width": 1800,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-1800-9fce1d3d2590.webp",
+        "bytes": 142620
+      }
+    ],
+    "mobile": [
+      {
+        "width": 384,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-mobile-384-a7111e8dc7ef.avif",
+        "bytes": 20873
+      },
+      {
+        "width": 576,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-mobile-576-897d90b58a20.avif",
+        "bytes": 36206
+      },
+      {
+        "width": 384,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-mobile-384-d8dcdc02b17f.webp",
+        "bytes": 25198
+      },
+      {
+        "width": 576,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-mobile-576-4188c7935856.webp",
+        "bytes": 43970
+      }
+    ],
+    "mobileWide": [
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-mobilewide-768-35a17a54a295.avif",
+        "bytes": 40661
+      },
+      {
+        "width": 960,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-mobilewide-960-305d6809681a.avif",
+        "bytes": 54007
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-mobilewide-768-4dfe45003cb9.webp",
+        "bytes": 49888
+      },
+      {
+        "width": 960,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-mobilewide-960-139a8c34b76c.webp",
+        "bytes": 66816
+      }
+    ],
+    "tablet": [
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-tablet-768-7119a81946a1.avif",
+        "bytes": 35769
+      },
+      {
+        "width": 960,
+        "format": "avif",
+        "src": "/images/matrix/optimized/hero-studio-tablet-960-55ce84838b67.avif",
+        "bytes": 48386
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-tablet-768-f7ed91ddafa0.webp",
+        "bytes": 43246
+      },
+      {
+        "width": 960,
+        "format": "webp",
+        "src": "/images/matrix/optimized/hero-studio-tablet-960-5858fc8e24f7.webp",
+        "bytes": 57328
+      }
+    ]
+  },
+  "/images/matrix/projects-office.webp": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/projects-office-480-8f41feba83b4.avif",
+        "bytes": 18884
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/projects-office-768-5c52ddd867b1.avif",
+        "bytes": 40727
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/projects-office-1024-bd311d936b57.avif",
+        "bytes": 63627
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/projects-office-1440-30f6772d762f.avif",
+        "bytes": 100371
+      },
+      {
+        "width": 1672,
+        "format": "avif",
+        "src": "/images/matrix/optimized/projects-office-1672-145852437fec.avif",
+        "bytes": 143784
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/projects-office-480-4ef361d0bcb0.webp",
+        "bytes": 24482
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/projects-office-768-f2565a2bc731.webp",
+        "bytes": 51244
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/projects-office-1024-12ed918a2226.webp",
+        "bytes": 80024
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/projects-office-1440-24687cb9f52b.webp",
+        "bytes": 125602
+      },
+      {
+        "width": 1672,
+        "format": "webp",
+        "src": "/images/matrix/optimized/projects-office-1672-fe66c16d61d1.webp",
+        "bytes": 181052
+      }
+    ],
+    "mobile": [],
+    "mobileWide": [],
+    "tablet": []
+  },
+  "/images/matrix/commercial.webp": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/commercial-480-ff0c567c7f77.avif",
+        "bytes": 19653
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/commercial-768-132565acb25f.avif",
+        "bytes": 46863
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/commercial-1024-8ccf21bacb13.avif",
+        "bytes": 69176
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/commercial-1440-65659583b4ca.avif",
+        "bytes": 107555
+      },
+      {
+        "width": 1536,
+        "format": "avif",
+        "src": "/images/matrix/optimized/commercial-1536-a7074038ee27.avif",
+        "bytes": 139341
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/commercial-480-ced76a6e34d5.webp",
+        "bytes": 24898
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/commercial-768-5674ee15bf50.webp",
+        "bytes": 58790
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/commercial-1024-b452935f53a2.webp",
+        "bytes": 86640
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/commercial-1440-fd31440196d6.webp",
+        "bytes": 135256
+      },
+      {
+        "width": 1536,
+        "format": "webp",
+        "src": "/images/matrix/optimized/commercial-1536-4a054283645e.webp",
+        "bytes": 180620
+      }
+    ],
+    "mobile": [],
+    "mobileWide": [],
+    "tablet": []
+  },
+  "/images/matrix/residential.webp": {
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/residential-480-e5701043b0aa.avif",
+        "bytes": 16661
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/residential-768-8cac6ccf5473.avif",
+        "bytes": 36925
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/residential-1024-82b2ee47031f.avif",
+        "bytes": 61045
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/residential-1440-080d48ba03f0.avif",
+        "bytes": 99813
+      },
+      {
+        "width": 1774,
+        "format": "avif",
+        "src": "/images/matrix/optimized/residential-1774-75ac072b63f7.avif",
+        "bytes": 159378
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/residential-480-6a0ae9915ca7.webp",
+        "bytes": 21382
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/residential-768-9c1ec29d3b22.webp",
+        "bytes": 45986
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/residential-1024-3b82586d1b84.webp",
+        "bytes": 74752
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/residential-1440-41fda97b87d9.webp",
+        "bytes": 119838
+      },
+      {
+        "width": 1774,
+        "format": "webp",
+        "src": "/images/matrix/optimized/residential-1774-cb90ad8f2cf2.webp",
+        "bytes": 197394
+      }
+    ],
+    "mobile": [],
+    "mobileWide": [],
+    "tablet": []
+  },
+  "/images/matrix/process.webp": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/process-480-92e55aa1d691.avif",
+        "bytes": 17662
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/process-768-210240d4d018.avif",
+        "bytes": 34843
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/process-1024-c75565ee2581.avif",
+        "bytes": 51896
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/process-1440-2596129c6990.avif",
+        "bytes": 77979
+      },
+      {
+        "width": 1672,
+        "format": "avif",
+        "src": "/images/matrix/optimized/process-1672-872b41eef651.avif",
+        "bytes": 102428
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/process-480-611601dbcad3.webp",
+        "bytes": 23790
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/process-768-0a8828d5054d.webp",
+        "bytes": 45848
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/process-1024-439e50ee1f96.webp",
+        "bytes": 66310
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/process-1440-0504c42ff846.webp",
+        "bytes": 99530
+      },
+      {
+        "width": 1672,
+        "format": "webp",
+        "src": "/images/matrix/optimized/process-1672-a5a3714f1d76.webp",
+        "bytes": 132078
+      }
+    ],
+    "mobile": [],
+    "mobileWide": [],
+    "tablet": []
+  },
+  "/images/matrix/contact.webp": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "width": 480,
+        "format": "avif",
+        "src": "/images/matrix/optimized/contact-480-2e042873c5a7.avif",
+        "bytes": 19634
+      },
+      {
+        "width": 768,
+        "format": "avif",
+        "src": "/images/matrix/optimized/contact-768-d6a15cdc3785.avif",
+        "bytes": 41996
+      },
+      {
+        "width": 1024,
+        "format": "avif",
+        "src": "/images/matrix/optimized/contact-1024-db890ff96104.avif",
+        "bytes": 58882
+      },
+      {
+        "width": 1440,
+        "format": "avif",
+        "src": "/images/matrix/optimized/contact-1440-699df9797bb5.avif",
+        "bytes": 86904
+      },
+      {
+        "width": 1536,
+        "format": "avif",
+        "src": "/images/matrix/optimized/contact-1536-a99f56d745a5.avif",
+        "bytes": 104748
+      },
+      {
+        "width": 480,
+        "format": "webp",
+        "src": "/images/matrix/optimized/contact-480-8a1c5a6724cf.webp",
+        "bytes": 26220
+      },
+      {
+        "width": 768,
+        "format": "webp",
+        "src": "/images/matrix/optimized/contact-768-d0ff28c71045.webp",
+        "bytes": 54850
+      },
+      {
+        "width": 1024,
+        "format": "webp",
+        "src": "/images/matrix/optimized/contact-1024-6a329f85663e.webp",
+        "bytes": 74522
+      },
+      {
+        "width": 1440,
+        "format": "webp",
+        "src": "/images/matrix/optimized/contact-1440-f7342138af8e.webp",
+        "bytes": 112182
+      },
+      {
+        "width": 1536,
+        "format": "webp",
+        "src": "/images/matrix/optimized/contact-1536-676e9a57ebcc.webp",
+        "bytes": 139730
+      }
+    ],
+    "mobile": [],
+    "mobileWide": [],
+    "tablet": []
+  }
+}

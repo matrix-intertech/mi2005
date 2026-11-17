@@ -21,6 +21,8 @@ export function pageAnswers(path: RoutePath): Answer[] {
   const service = services.find((item) => `/${item.slug}` === path);
   if (service) return [
     { question: `What does Matrix's ${service.title.toLowerCase()} service cover?`, answer: `${service.summary} ${service.details.join(" ")}` },
+    { question: "Who is this service for?", answer: service.audience },
+    { question: "How is the work delivered?", answer: service.delivery },
     { question: "What information should I share for a project enquiry?", answer: "Share the site location, intended use, approximate area, scope and target timeline. The team can then discuss site conditions, design requirements and execution planning." },
   ];
   if (path === "/") return [
@@ -49,7 +51,7 @@ export function pageSchemas(path: RoutePath) {
   }] : [breadcrumbSchema(path, seo.title.split(" | ")[0])];
   const service = services.find((item) => `/${item.slug}` === path);
   if (service) graph.push({ "@type": "Service", "@id": absoluteUrl(`${path}#service`),
-    name: service.title, serviceType: service.title, description: service.summary,
+    name: service.heading, serviceType: service.heading, description: service.summary,
     url: absoluteUrl(path), image: absoluteUrl(service.image), provider: organization,
   });
   // The answers below are also rendered visibly; no search rich-result eligibility is assumed.

@@ -8,7 +8,7 @@ import { processSteps } from "@/lib/site-data";
 export default function Page() {
   return (
     <PageShell seoPath="/process">
-      <PageHero eyebrow="Process" title="A precise path from inspection to handover." text="A turnkey project needs decisions, documentation and site work to move in sequence. Matrix structures each stage so the final space is buildable, coordinated and ready for use." image="/images/matrix/process.webp" />
+      <PageHero eyebrow="Process" title="A precise path from inspection to handover." text="The turnkey interior project process connects site inspection, design, planning and execution through handover. Matrix structures each stage so the final space is buildable, coordinated and ready for use." image="/images/matrix/process.webp" />
       <section className="bg-white px-5 py-14 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.9fr_1.1fr]">
           <div className="lg:sticky lg:top-28 lg:self-start"><SectionHeader eyebrow="Timeline" title="Project stages with clear ownership." text="From first survey to final finishes, each stage produces the decisions needed for the next one." /></div>

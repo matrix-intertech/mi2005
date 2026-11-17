@@ -9,7 +9,7 @@ import { contact } from "@/lib/site-data";
 export default function Page() {
   return (
     <PageShell seoPath="/contact-us">
-      <PageHero eyebrow="Contact" title="Start with the site, scope and timeline." text="Share project basics and the team can follow up with the right next step. Enquiries are delivered through the configured contact email workflow." image="/images/matrix/contact.webp" />
+      <PageHero eyebrow="Contact" title="Start with the site, scope and timeline." text="Contact our New Delhi team for an interior project consultation or office interior quotation. Share the site location, scope and timeline so we can discuss your turnkey project enquiry." image="/images/matrix/contact.webp" />
       <section className="bg-warm px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[.8fr_1.2fr]">
           <div>

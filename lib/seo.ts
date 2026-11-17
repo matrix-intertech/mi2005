@@ -5,53 +5,53 @@ export const siteUrl = "https://www.matrixonline.in";
 export const routeSeo = [
   {
     path: "/",
-    title: "Matrix Intertech | Turnkey Interiors and Architecture",
-    description: "Matrix Intertech delivers premium interior design, architecture coordination and turnkey fitout execution for corporate, residential and commercial spaces.",
+    title: "Turnkey Interior Designers Delhi NCR | Matrix Intertech",
+    description: "Delhi-based Matrix Intertech delivers turnkey interior solutions, architectural coordination and fit-out execution for corporate, commercial and residential spaces.",
   },
   {
     path: "/who-we-are",
-    title: "Who We Are | Matrix Intertech",
-    description: "Learn about Matrix Intertech, a Delhi-based architecture, interiors and turnkey implementation company founded in 2005.",
+    title: "Turnkey Interior Company in Delhi | Matrix Intertech",
+    description: "Meet Matrix Intertech, a Delhi-based interior design and build company coordinating architecture, site execution and turnkey project delivery since 2005.",
   },
   {
     path: "/about-us",
-    title: "About Us | Matrix Intertech",
-    description: "About Matrix Intertech, a New Delhi interior and architectural services company delivering concept-to-complete turnkey interiors since 2005.",
+    title: "Matrix Intertech Private Limited | About Our Company",
+    description: "Matrix Intertech Private Limited is a New Delhi architecture and interior company with ISO certifications and concept-to-handover delivery capabilities.",
   },
   {
     path: "/real-estate",
-    title: "Real Estate Interiors | Matrix Intertech",
-    description: "Experience centres, sales offices and project environments designed and executed for real estate presentation and client engagement.",
+    title: "Real Estate Interior Solutions | Matrix Intertech",
+    description: "Real estate interior solutions for sales offices, experience centres and project environments, with developer fit-out support, coordination and property interior execution.",
   },
   {
     path: "/repair-and-maintenance",
-    title: "Repair and Maintenance | Matrix Intertech",
-    description: "Repair, refurbishment and upgrade work for occupied offices, commercial spaces and residential properties with practical site planning.",
+    title: "Office Repair and Maintenance Delhi NCR | Matrix Intertech",
+    description: "Commercial repair and maintenance, office refurbishment and interior renovation from Delhi-based Matrix Intertech, with phased execution for occupied properties.",
   },
   {
     path: "/residential",
-    title: "Residential Interiors | Matrix Intertech",
-    description: "Premium residential interiors for homes and apartments, planned around comfort, storage, finishes and long-term usability.",
+    title: "Residential Interior Designers Delhi NCR | Matrix Intertech",
+    description: "Turnkey home interiors and apartment interior design with coordinated layouts, lighting, finishes and residential execution by Delhi-based Matrix Intertech.",
   },
   {
     path: "/commercial",
-    title: "Commercial Interiors | Matrix Intertech",
-    description: "Commercial, corporate, retail, hospitality and institutional interiors delivered with turnkey coordination and handover-focused execution.",
+    title: "Commercial Interior Designers Delhi NCR | Matrix Intertech",
+    description: "Corporate office interiors, workplace design and commercial fit-out execution for offices, retail and hospitality by Delhi-based Matrix Intertech.",
   },
   {
     path: "/process",
-    title: "Process | Matrix Intertech",
-    description: "Matrix Intertech's turnkey process from site inspection and concept design through detailing, estimates, execution, finishes and handover.",
+    title: "Turnkey Interior Project Process | Matrix Intertech",
+    description: "Understand the turnkey interior project process: site inspection, design, estimates, execution and project management through finishes and handover.",
   },
   {
     path: "/projects",
-    title: "Projects | Matrix Intertech",
-    description: "Explore Matrix Intertech project categories across corporate offices, residential apartments, commercial showrooms and turnkey execution.",
+    title: "Corporate and Residential Interior Projects | Matrix Intertech",
+    description: "Explore corporate interior projects, office fit-out and residential project categories, with an overview of Matrix Intertech turnkey interior execution capabilities.",
   },
   {
     path: "/career",
-    title: "Career | Matrix Intertech",
-    description: "Send career enquiries for interior design, architecture, site execution and project management roles with Matrix Intertech.",
+    title: "Interior Design and Site Execution Careers | Matrix Intertech",
+    description: "Explore current interior design, site execution and project delivery openings at Matrix Intertech. Review role requirements and apply for available positions.",
   },
   {
     path: "/clients",
@@ -65,8 +65,8 @@ export const routeSeo = [
   },
   {
     path: "/contact-us",
-    title: "Contact | Matrix Intertech",
-    description: "Contact Matrix Intertech for architecture, interiors and turnkey fitout project enquiries in Delhi and beyond.",
+    title: "Interior Project Consultation Delhi NCR | Matrix Intertech",
+    description: "Contact Matrix Intertech in New Delhi for an interior project consultation, office interior quotation or turnkey project enquiry. Share your site, scope and timeline.",
   },
 ] as const;
 
