@@ -4,7 +4,7 @@ import imageDimensions from "@/lib/image-dimensions.json";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
 import type React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -16,10 +16,12 @@ type ParallaxImageProps = Omit<React.ImgHTMLAttributes<HTMLImageElement>, "class
   priority?: boolean;
 };
 
-function useMounted() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return mounted;
+const subscribeToMount = () => () => {};
+const clientMounted = () => true;
+const serverMounted = () => false;
+
+export function useMounted() {
+  return useSyncExternalStore(subscribeToMount, clientMounted, serverMounted);
 }
 
 export function SectionReveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {

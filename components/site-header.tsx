@@ -4,17 +4,17 @@ import Link from "next/link";
 import { BadgeCheck, ChevronDown, Menu } from "lucide-react";
 import { motion, useReducedMotion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useMounted } from "@/components/motion";
 import { aboutItems, navItems } from "@/lib/site-data";
 
 const isoCertificatePath = "/images/matrix/PDF/MATRIX-INTERTECH-PRIVATE-LIMITED-ISO-9001-FINAL-COPY-BCI-150105QMS-.pdf";
 
 export function SiteHeader() {
   const { scrollY } = useScroll();
-  const [mounted, setMounted] = useState(false);
+  const mounted = useMounted();
   const [scrolled, setScrolled] = useState(false);
   const reduceMotion = useReducedMotion();
 
-  useEffect(() => setMounted(true), []);
   useEffect(() => scrollY.on("change", (latest) => setScrolled(latest > 16)), [scrollY]);
 
   const headerClass = "sticky top-0 z-50 border-b bg-warm/90 backdrop-blur-xl";
@@ -30,7 +30,7 @@ function HeaderContent() {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
+    <div className="site-header-layout mx-auto flex max-w-[92rem] items-center justify-between gap-5 px-5 py-4 sm:px-6">
       <Link href="/" className="flex min-w-0 items-center" aria-label="Matrix Intertech home">
         <img width={1302} height={385} src="/images/matrix/logo.png" alt="Matrix Intertech logo" className="h-10 w-auto max-w-[190px] object-contain sm:h-10" />
       </Link>
@@ -65,11 +65,12 @@ function HeaderContent() {
         </a>
         <Link href="/contact-us" className="hidden rounded-sm bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-bronze sm:inline-flex">Start enquiry</Link>
       </div>
-      <details className="relative lg:hidden" open={mobileOpen} onToggle={(event) => setMobileOpen(event.currentTarget.open)}>
-        <summary className="flex cursor-pointer list-none items-center rounded-sm border border-charcoal/15 p-2 focus:outline-none focus:ring-4 focus:ring-bronze/20" aria-controls="mobile-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
+      <details className="mobile-menu relative lg:hidden" open={mobileOpen} onToggle={(event) => setMobileOpen(event.currentTarget.open)}>
+        <summary className="flex min-h-11 min-w-11 sm:min-h-0 sm:min-w-0 justify-center cursor-pointer list-none items-center rounded-sm border border-charcoal/15 p-2 focus:outline-none focus:ring-4 focus:ring-bronze/20" aria-controls="mobile-navigation" aria-expanded={mobileOpen} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
           <Menu className="h-5 w-5" aria-hidden="true" />
         </summary>
         <nav id="mobile-navigation" className="absolute right-0 mt-3 grid w-72 gap-1 rounded-sm border border-charcoal/10 bg-warm p-3 shadow-2xl" aria-label="Mobile navigation">
+          <Link href="/contact-us" onClick={() => setMobileOpen(false)} className="rounded-sm bg-charcoal px-3 py-3 text-sm font-semibold text-white sm:hidden">Start enquiry</Link>
           {navItems.slice(0, 1).map((item) => <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="rounded-sm px-3 py-2 text-sm font-medium hover:bg-white focus:outline-none focus:ring-4 focus:ring-bronze/20">{item.label}</Link>)}
           <details className="rounded-sm px-3 py-2" open={aboutOpen} onToggle={(event) => setAboutOpen(event.currentTarget.open)}>
             <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-medium" aria-expanded={aboutOpen} aria-label="About Us links">

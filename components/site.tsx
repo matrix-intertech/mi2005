@@ -16,7 +16,7 @@ export function PageShell({ children, seoPath }: { children: React.ReactNode; se
     <div className="min-h-screen bg-warm text-charcoal">
       <SiteHeader />
       <main>{children}{seoPath && <SeoContent path={seoPath} />}</main>
-      <footer className="bg-charcoal text-white">
+      <footer className="site-footer bg-charcoal text-white">
         <div className="mx-auto grid max-w-[92rem] gap-10 px-5 py-14 sm:px-6 lg:grid-cols-[1.25fr_.6fr_.6fr_.6fr]">
           <div>
             <img width={450} height={135} src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" className="h-14 w-auto max-w-[240px] object-contain" />
@@ -76,7 +76,7 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
 }
 
 export function TrustStrip() {
-  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-5 px-5 py-7 sm:px-6 md:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/58">{item.label}</div></div></SectionReveal>)}</div></section>;
+  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-x-5 gap-y-6 px-5 py-7 sm:px-6 sm:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} className="min-w-0 break-words" delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/58">{item.label}</div></div></SectionReveal>)}</div></section>;
 }
 
 
