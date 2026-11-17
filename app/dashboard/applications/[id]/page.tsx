@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Mail } from "lucide-react";
-import { ObjectId } from "mongodb";
+import type { ObjectId } from "mongodb";
 import { updateApplicationStatus } from "@/lib/admin-actions";
 import { getDb } from "@/lib/db";
 import type { CareerApplication, CareerOpening } from "@/lib/types";
@@ -28,7 +28,7 @@ function StatusAction({ id, status, label }: { id: string; status: "reviewed" | 
 }
 
 export default async function ApplicationDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+  const { id } = await params; const { ObjectId } = await import("mongodb");
 
   if (!ObjectId.isValid(id)) {
     return <MissingApplication message="This application link is not valid." />;

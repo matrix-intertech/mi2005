@@ -1,5 +1,4 @@
 import { invalidatePublicPortfolio } from "@/lib/public-portfolio-cache";
-import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import { portfolioCollection, serializeClient } from "@/lib/portfolio";
 import { authorizePortfolio, clientFields, portfolioError, portfolioForm } from "@/lib/portfolio-api";
@@ -9,6 +8,7 @@ type Context = { params: Promise<{ id: string }> };
 async function clientId(context: Context) {
   const { id } = await context.params;
   if (!/^[0-9a-f]{24}$/i.test(id)) throw new PortfolioError("Client not found.", 404);
+  const { ObjectId } = await import("mongodb");
   return new ObjectId(id);
 }
 export async function PATCH(request: Request, context: Context) {

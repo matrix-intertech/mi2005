@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/images/matrix/optimized/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] }, ...["/login", "/dashboard/:path*", "/api/:path*"].map((source) => ({
       source, headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
-    })), ...["/login", "/dashboard/:path*", "/api/admin/:path*", "/api/auth/:path*", "/api/enquiry", "/api/career/:path*"].map((source) => ({
+    })), ...["/login", "/dashboard/:path*", "/api/:path*"].map((source) => ({
       source, headers: [{ key: "Cache-Control", value: "private, no-store, max-age=0" }],
     }))];
   },

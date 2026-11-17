@@ -5,6 +5,21 @@ import { useEffect } from "react";
 // One observer and one scroll listener; content remains server-rendered and visible without JS.
 export function SiteEffects() {
   useEffect(() => {
+    const setLogoFallback = (image: HTMLImageElement, failed: boolean) => {
+      const fallback = image.closest("[data-client-logo]")?.querySelector<HTMLElement>("[data-logo-fallback]");
+      if (fallback) { image.hidden = failed; fallback.hidden = !failed; }
+    };
+    const onImageError = (event: Event) => {
+      if (event.target instanceof HTMLImageElement && event.target.hasAttribute("data-logo-image")) setLogoFallback(event.target, true);
+    };
+    const onImageLoad = (event: Event) => {
+      if (event.target instanceof HTMLImageElement && event.target.hasAttribute("data-logo-image")) setLogoFallback(event.target, false);
+    };
+    document.addEventListener("error", onImageError, true);
+    document.addEventListener("load", onImageLoad, true);
+    document.querySelectorAll<HTMLImageElement>("[data-logo-image]").forEach(image => {
+      if (image.complete) setLogoFallback(image, !image.naturalWidth);
+    });
     const media = matchMedia("(prefers-reduced-motion: reduce)");
     let cleanup = () => {};
     const setup = () => {
@@ -51,7 +66,7 @@ export function SiteEffects() {
       };
     };
     setup(); media.addEventListener("change", setup);
-    return () => { cleanup(); media.removeEventListener("change", setup); };
+    return () => { cleanup(); media.removeEventListener("change", setup); document.removeEventListener("error", onImageError, true); document.removeEventListener("load", onImageLoad, true); };
   }, []);
   return null;
 }

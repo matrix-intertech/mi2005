@@ -39,7 +39,7 @@ export function CareerApplicationForm({ id, role, requiredFields }: CareerApplic
       <ApplicationInput name="phone" placeholder="Phone number" required={fields.phone} />
       <ApplicationInput name="experience" placeholder="Experience" required={fields.experience} />
       <ApplicationInput name="portfolioOrResumeUrl" type="url" placeholder="Paste Google Drive, LinkedIn, portfolio, or resume URL" required={fields.portfolioOrResumeUrl} className="sm:col-span-2" label="Portfolio / Resume link" />
-      <textarea name="message" required={fields.coverLetter} placeholder={`Cover letter${fields.coverLetter ? "" : " (optional)"} for ${role}`} rows={4} className="border border-charcoal/15 bg-warm px-3 py-2.5 text-sm sm:col-span-2" />
+      <textarea name="message" required={fields.coverLetter} placeholder={`Cover letter${fields.coverLetter ? "" : " (optional)"} for ${role}`} rows={4} className="border border-charcoal/55 bg-warm px-3 py-2.5 text-sm sm:col-span-2" />
       <input name="company" className="hidden" tabIndex={-1} autoComplete="off" />
       <button disabled={sending} className="w-fit bg-charcoal px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-60">{sending ? "Sending..." : "Submit application"}</button>
       {message ? <p className="self-center text-sm text-charcoal/70" role="status">{message}</p> : null}
@@ -52,7 +52,7 @@ function ApplicationInput({ name, placeholder, required, type = "text", classNam
   return (
     <label className={`block ${className}`}>
       {label ? <span className="mb-1.5 block text-xs font-semibold uppercase tracking-[.12em] text-charcoal/55">{label}{required ? " *" : ""}</span> : null}
-      <input name={name} type={type} required={required} placeholder={displayPlaceholder} className="w-full border border-charcoal/15 bg-warm px-3 py-2.5 text-sm" />
+      <input name={name} type={type} required={required} placeholder={displayPlaceholder} className="w-full border border-charcoal/55 bg-warm px-3 py-2.5 text-sm" />
     </label>
   );
 }

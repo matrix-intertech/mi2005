@@ -26,7 +26,7 @@ export function CareerEditor({ role }: { role?: CareerOpening }) {
         <Field label="Experience" name="experience" value={role?.experience} />
         <label className="block text-sm font-semibold">
           Employment type
-          <select name="type" defaultValue={role?.type || "Full-time"} className="mt-2 w-full border border-charcoal/15 bg-warm px-3 py-2.5">
+          <select name="type" defaultValue={role?.type || "Full-time"} className="mt-2 w-full border border-charcoal/55 bg-warm px-3 py-2.5">
             <option>Full-time</option>
             <option>Part-time</option>
             <option>Contract</option>
@@ -35,7 +35,7 @@ export function CareerEditor({ role }: { role?: CareerOpening }) {
         </label>
         <label className="block text-sm font-semibold">
           Status
-          <select name="status" defaultValue={role?.status || "open"} className="mt-2 w-full border border-charcoal/15 bg-warm px-3 py-2.5">
+          <select name="status" defaultValue={role?.status || "open"} className="mt-2 w-full border border-charcoal/55 bg-warm px-3 py-2.5">
             <option value="open">Open</option>
             <option value="closed">Closed</option>
           </select>
@@ -71,9 +71,9 @@ function RequiredField({ name, label, checked }: { name: string; label: string; 
 }
 
 function Field({ label, name, value, required = false }: { label: string; name: string; value?: string; required?: boolean }) {
-  return <label className="block text-sm font-semibold">{label}<input name={name} defaultValue={value} required={required} className="mt-2 w-full border border-charcoal/15 bg-warm px-3 py-2.5 font-normal" /></label>;
+  return <label className="block text-sm font-semibold">{label}<input name={name} defaultValue={value} required={required} className="mt-2 w-full border border-charcoal/55 bg-warm px-3 py-2.5 font-normal" /></label>;
 }
 
 function Area({ label, name, value, required = false }: { label: string; name: string; value?: string; required?: boolean }) {
-  return <label className="block text-sm font-semibold">{label}<textarea name={name} defaultValue={value} required={required} rows={4} className="mt-2 w-full border border-charcoal/15 bg-warm px-3 py-2.5 font-normal" /></label>;
+  return <label className="block text-sm font-semibold">{label}<textarea name={name} defaultValue={value} required={required} rows={4} className="mt-2 w-full border border-charcoal/55 bg-warm px-3 py-2.5 font-normal" /></label>;
 }

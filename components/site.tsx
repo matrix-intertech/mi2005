@@ -22,7 +22,7 @@ export function PageShell({ children, seoPath }: { children: React.ReactNode; se
           <div>
             <img width={450} height={135} src="/images/matrix/logo_dark.png" alt="Matrix Intertech logo" loading="lazy" decoding="async" className="h-14 w-auto max-w-[240px] object-contain" />
             <p className="mt-4 max-w-xl text-base leading-7 text-white/70">Interior, architecture and turnkey implementation for corporate, residential and commercial projects.</p>
-            <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="mt-5 inline-flex max-w-sm items-center gap-3 rounded-sm border border-white/12 bg-white/6 px-4 py-3 text-left transition hover:border-gold/60 hover:bg-white/10" aria-label="View ISO 9001 certificate PDF">
+            <a href={isoCertificatePath} target="_blank" rel="noreferrer" className="mt-5 inline-flex max-w-sm items-center gap-3 rounded-sm border border-white/12 bg-white/6 px-4 py-3 text-left transition hover:border-gold/60 hover:bg-white/10" title="View ISO 9001 certificate PDF">
               <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-gold text-charcoal"><BadgeCheck className="h-5 w-5" aria-hidden="true" /></span>
               <span>
                 <span className="block text-sm font-semibold text-white">ISO Certified Company</span>
@@ -45,14 +45,14 @@ export function PageShell({ children, seoPath }: { children: React.ReactNode; se
 }
 
 function FooterColumn({ title, items }: { title: string; items: { href: string; label: string }[] }) {
-  return <div><h3 className="text-base font-semibold text-gold">{title}</h3><div className="mt-4 grid gap-2">{items.map((item) => <Link prefetch={false} key={item.href} href={item.href} className="text-base text-white/70 hover:text-white">{item.label}</Link>)}</div></div>;
+  return <div><h3 className="text-base font-semibold text-gold">{title}</h3><div className="mt-4 grid gap-2">{items.map((item) => <a key={item.href} href={item.href} className="text-base text-white/70 hover:text-white">{item.label}</a>)}</div></div>;
 }
 
 export function SectionHeader({ eyebrow, title, text, inverse = false }: { eyebrow: string; title: string; text?: string; inverse?: boolean }) {
   return (
     <SectionReveal>
       <div>
-        <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">{eyebrow}</p>
+        <p data-inverse={inverse ? "true" : undefined} className="section-eyebrow text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">{eyebrow}</p>
         <h2 className={`mt-3 max-w-4xl text-4xl font-semibold leading-[1.08] sm:text-5xl ${inverse ? "text-white" : "text-charcoal"}`}>{title}</h2>
         {text ? <p className={`mt-5 max-w-2xl text-lg leading-8 ${inverse ? "text-white/68" : "text-charcoal/68"}`}>{text}</p> : null}
       </div>
@@ -77,7 +77,7 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
 }
 
 export function TrustStrip() {
-  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-x-5 gap-y-6 px-5 py-7 sm:px-6 sm:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} className="min-w-0 break-words" delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/58">{item.label}</div></div></SectionReveal>)}</div></section>;
+  return <section className="border-y border-charcoal/10 bg-white/55"><div className="mx-auto grid max-w-[92rem] grid-cols-2 gap-x-5 gap-y-6 px-5 py-7 sm:px-6 sm:grid-cols-4">{trustItems.map((item, index) => <SectionReveal key={item.value} className="min-w-0 break-words" delay={index * 0.06}><div><div className="text-xl font-semibold text-charcoal">{item.value}</div><div className="mt-1 text-sm text-charcoal/62">{item.label}</div></div></SectionReveal>)}</div></section>;
 }
 
 
@@ -88,7 +88,7 @@ export async function PreviousClients({ title = "Trusted by leading brands acros
     <section className="bg-warm px-5 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-[92rem]">
         <SectionReveal className="mx-auto max-w-4xl text-center">
-          <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">Previous clients</p>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze-ink">Previous clients</p>
           <h2 className="mx-auto mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] text-charcoal sm:text-5xl">{title}</h2>
           <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-charcoal/68 sm:text-lg sm:leading-8">
             Matrix Intertech has delivered interior, fit-out and project execution work for clients across aviation, banking, media, retail, hospitality, technology and infrastructure.

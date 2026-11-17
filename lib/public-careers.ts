@@ -1,6 +1,5 @@
 import "server-only";
 import { cache } from "react";
-import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/db";
 import type { CareerOpening } from "@/lib/types";
 import { isPublicCareer } from "@/lib/career-seo";
@@ -14,6 +13,7 @@ export const getPublicCareers = cache(async () => {
 
 export const getPublicCareer = cache(async (id: string) => {
   if (!/^[a-f0-9]{24}$/i.test(id)) return null;
+  const { ObjectId } = await import("mongodb");
   const role = await (await getDb()).collection<CareerOpening>("careerOpenings").findOne({ _id: new ObjectId(id) });
   return role && isPublicCareer(role) ? role : null;
 });

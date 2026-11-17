@@ -2,7 +2,7 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { PUBLIC_PORTFOLIO_TAG } from "@/lib/public-portfolio-cache";
 import seeds from "@/lib/portfolio-seed.json";
-import { ObjectId } from "mongodb";
+import type { ObjectId } from "mongodb";
 import { getDb } from "@/lib/db";
 import type { PortfolioClientView } from "@/lib/portfolio-types";
 

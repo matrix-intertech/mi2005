@@ -1,5 +1,4 @@
 import { invalidatePublicPortfolio } from "@/lib/public-portfolio-cache";
-import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 import { portfolioCollection, serializeClient, type PortfolioClient } from "@/lib/portfolio";
 import { authorizePortfolio, clientFields, portfolioError, portfolioForm } from "@/lib/portfolio-api";
@@ -17,6 +16,7 @@ export async function POST(request: Request) {
   let uploaded: string | undefined;
   try {
     await authorizePortfolio(request);
+    const { ObjectId } = await import("mongodb");
     const form = await portfolioForm(request);
     const fields = clientFields(form);
     const submissionId = form.get("submissionId");

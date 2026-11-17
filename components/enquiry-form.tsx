@@ -39,7 +39,7 @@ export function EnquiryForm() {
       </div>
       <label className="mt-5 block">
         <span className="text-sm font-semibold text-charcoal">Project brief</span>
-        <textarea name="message" required rows={5} className="mt-2 w-full rounded-sm border border-charcoal/15 bg-warm px-4 py-3 text-base outline-none ring-bronze/20 transition focus:ring-4" placeholder="Tell us about the site, location, timeline and scope." />
+        <textarea name="message" required rows={5} className="mt-2 w-full rounded-sm border border-charcoal/55 bg-warm px-4 py-3 text-base outline-none ring-bronze transition focus:ring-4" placeholder="Tell us about the site, location, timeline and scope." />
       </label>
       <input type="text" name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <button type="submit" disabled={status === "sending"} className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-charcoal px-5 py-3 text-sm font-semibold text-white transition hover:bg-bronze disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto">
@@ -51,7 +51,7 @@ export function EnquiryForm() {
 }
 
 function Field({ name, label, type = "text", placeholder, required = false }: { name: string; label: string; type?: string; placeholder?: string; required?: boolean }) {
-  return <label className="block"><span className="text-sm font-semibold text-charcoal">{label}</span><input name={name} type={type} required={required} placeholder={placeholder} className="mt-2 w-full rounded-sm border border-charcoal/15 bg-warm px-4 py-3 text-base outline-none ring-bronze/20 transition focus:ring-4" /></label>;
+  return <label className="block"><span className="text-sm font-semibold text-charcoal">{label}</span><input name={name} type={type} required={required} placeholder={placeholder} className="mt-2 w-full rounded-sm border border-charcoal/55 bg-warm px-4 py-3 text-base outline-none ring-bronze transition focus:ring-4" /></label>;
 }
 
 

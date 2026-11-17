@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { ObjectId } from "mongodb";
 import { getDb } from "@/lib/db";
 import type { CareerApplication, CareerOpening, RequiredApplicationFields } from "@/lib/types";
 
@@ -24,6 +23,7 @@ function isValidUrl(value: string) {
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  const { ObjectId } = await import("mongodb");
   if (!ObjectId.isValid(id)) return NextResponse.json({ message: "Role not found." }, { status: 404 });
 
   const data = await request.formData();

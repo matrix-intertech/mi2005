@@ -76,6 +76,29 @@ try {
   console.log("PASS enquiry UI with intercepted API; no SMTP or database writes");
   assert.deepEqual(errors, []);
 
+  // Logo fallback must work without hydrating each logo, including reduced motion.
+  await page.goto(base, { waitUntil: "load" });
+  const logo = page.locator("[data-logo-image]").first();
+  if (await logo.count()) {
+    const src = await logo.getAttribute("src");
+    await page.route(`**${src}`, route => route.abort());
+    await page.reload({ waitUntil: "load" });
+    await page.locator("[data-logo-image]").first().evaluate(el => el.parentElement.parentElement.scrollIntoView({ block: "center" }));
+    await page.waitForFunction(() => {
+      const image = document.querySelector("[data-logo-image]");
+      return image.hidden && !image.closest("[data-client-logo]").querySelector("[data-logo-fallback]").hidden;
+    });
+    console.log("PASS server-rendered client logo fallback with reduced motion");
+    await page.unroute(`**${src}`);
+    const recovered = new URL(src, base); recovered.searchParams.set("qa-recovery", "1");
+    await page.locator("[data-logo-image]").first().evaluate((image, url) => { image.src = url; }, recovered.href);
+    await page.waitForFunction(() => {
+      const image = document.querySelector("[data-logo-image]");
+      return image.complete && image.naturalWidth > 0 && !image.hidden && image.closest("[data-client-logo]").querySelector("[data-logo-fallback]").hidden;
+    }, undefined, { timeout: 5000 });
+    console.log("PASS client logo recovery after a corrected image source");
+  }
+
   const noJS = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const plain = await noJS.newPage(); await plain.goto(base); await plain.waitForTimeout(1500);
   assert.ok(await plain.locator("h1").isVisible());

@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { Mail, ArrowLeft } from "lucide-react";
-import { ObjectId } from "mongodb";
+
 import { updateEnquiryStatus } from "@/lib/admin-actions";
 import { getDb } from "@/lib/db";
 import type { Enquiry } from "@/lib/types";
@@ -28,7 +28,7 @@ function StatusAction({ id, status, label }: { id: string; status: "read" | "arc
 }
 
 export default async function EnquiryDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+  const { id } = await params; const { ObjectId } = await import("mongodb");
 
   if (!ObjectId.isValid(id)) {
     return <MissingEnquiry message="This enquiry link is not valid." />;

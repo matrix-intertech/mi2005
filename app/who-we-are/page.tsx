@@ -108,7 +108,7 @@ export function AboutPage({ seoPath = "/who-we-are" }: { seoPath?: "/who-we-are"
             {services.map((service, index) => (
               <SectionReveal key={service.slug} delay={index * 0.05}>
                 <Link href={service.href} className="group block h-full border border-charcoal/10 bg-warm p-6 transition hover:-translate-y-0.5 hover:border-bronze/40 hover:bg-white">
-                  <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze">{String(index + 1).padStart(2, "0")}</p>
+                  <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-bronze-ink">{String(index + 1).padStart(2, "0")}</p>
                   <h3 className="mt-4 text-2xl font-semibold">{service.title}</h3>
                   <p className="mt-3 text-base leading-7 text-charcoal/66">{service.summary}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-charcoal group-hover:text-bronze">Explore service <ArrowRight className="h-4 w-4" /></span>
@@ -215,7 +215,7 @@ export function AboutPage({ seoPath = "/who-we-are" }: { seoPath?: "/who-we-are"
                     <span className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-gold text-charcoal">
                       <FileText className="h-6 w-6" aria-hidden="true" />
                     </span>
-                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-white/46">{item.type}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.16em] text-white/50">{item.type}</span>
                   </div>
                   <h3 className="mt-6 text-xl font-semibold leading-tight">{item.title}</h3>
                   <p className="mt-3 flex-1 text-base leading-7 text-white/68">{item.description}</p>
